@@ -1,4 +1,149 @@
+/*Général*/
+body{
+    width: 600px;
+    margin: 0;
+}
+h1,.text_description,#title_description,#explore{
+    text-align: center;
+}
+
+.text_description{
+    width: 500px;
+    margin-bottom: 30px;
+}
+#description{
+    background-color:rgba(192, 187, 187, 0.247);
+    padding: 35px 0;
+}
+#explore{
+    border-radius: 25px 25px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.342);
+    background: linear-gradient(#FF79DA ,#9356DC );
+    width: 230px;
+    height: 50px;
+    padding: 3px 3px;
+}
+.title{
+    width: 100%;
+    margin: 30px;
+}
+.align{
+    margin: 20px;
+}
+/* Flex box*/
+#description,#gps,#localisation,.align,.step,.number,.function_step,.align_choice{
+    display: flex;
+}
+section,.align{
+    flex-direction: column;
+}
+#localisation,.step,.function_step{
+    flex-direction: row;
+}
+#description,#localisation,#gps{
+    justify-content: center;
+    align-items: center;
+}
+/*GPS*/
+#localisation{
+    width:225px;
+    justify-content: space-around;
+}
+/*Fonctionnement*/
+.align {
+    justify-content: space-between;
+    height: 400px;
+
+}
+
+.number{
+    background-color: #9356DC;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 15px;
+    top: 25px;
+    justify-content: center;
+    align-items: center;
+}
+.step{
+    margin-top: 30px;
+    margin-right: 10px;
+}
+.background_step{
+    width: 600px;
+    height: 80px;
+    background-color: rgb(241, 241, 241);
+    box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.205);
+    border-radius:25px 25px;
+   }
+   .function_step{
+       width: 310px;
+       height: 50px;
+       margin-left: 30px;
+       margin-top: 15px;
+       justify-content: space-around;
+       align-items: center;
+   }
+
+   /*choix des restaurants*/
+   .align_choice{
+    background-color:rgba(192, 187, 187, 0.247);
+        justify-content: space-around;
+    margin-top: 130px;
+   }
+  figure img{
+       border-radius: 15px 15px 0 0;
+   }
+   figure .name{
+       border-radius: 0 0 15px 15px;
+   }
+   .name{
+       background-color: white;
+   }
+/*Images*/
 img{
-    width: 350px;
-    height: 200px;
+    width: 500px;
+    height: 300px;
+}
+
+/*Polices*/
+
+h1{
+    font-family: 'Shrikhand', cursive;
+    font-size: 50px;
+    margin: 0;
+}
+#localisation{
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+.function_step{
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+}
+#title_description,.title{
+    font-family: 'Roboto', sans-serif;
+    font-size:40px;
+}
+.text_description{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 29px;
+}
+#explore,.number{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 16px;
+    
+}
+/*gps*/
+
+#gps{
+  background-color: rgba(209, 209, 209, 0.301);
+  height: 50px;
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.295) ;
+  font-family: 'Roboto', sans-serif;
+  color: rgba(0, 0, 0, 0.705);
 }
