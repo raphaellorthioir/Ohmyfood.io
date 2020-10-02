@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/menu.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
@@ -10,87 +11,134 @@
     <title>ohmyfood- À la française</title>
 </head>
 <body>
-    <header>
-        <h1>ohmyfood</h1>
-        <img src="../images/restaurants/a_la_francaise.jpg" alt="Menu du restaurant : À la française">
-    </header>
+    <div class="wrap">
+            <header>
+                <h1>ohmyfood</h1>
+                <img src="../images/restaurants/a_la_francaise.jpg" alt="Menu du restaurant : À la française">
+            </header>
 
-    <section>
-        <h2>À la française</h2>
-        <button type="button"><i class="far fa-heart"></i></button>
-        <article>
-            <h3><span>ENTR</span>ÉES</h3>
+            <section>
+                
+                <div class="name">
+                    <h2>À la française</h2>
+                <button class="btn" type="button"><i class="far fa-heart"></i></button>
+                </div>
+                
+                <article>
+                    <h3><span>ENTR</span>ÉES</h3>
 
-            <button type="button"><b>Tartare de poulpe acidulé</b><br>Aux zests d'orange
-                     <p>25€</p>
-                     <div><i class="fas fa-check-circle"></i></div>
-            </button>
+                    <button class="choice_btn" type="button"> 
+                        <div class="meal_and_plus">
+                            <p class= "meal">Tartare de poulpe acidulé </p>
+                            <p class="plus"> Aux zests d'orange</p> 
+                        </div>
+                        
+                        <div class="price">25€</div> 
+                        <div class="valid"><i class="fas fa-check-circle"></i></div>
+                    </button>
 
-            <button type="button"><b>Velouté de légumes d'antan</b> <br>Carrottes,panais,topinambour
-                 <p>35€</p>
-                 <div><i class="fas fa-check-circle"></i></div>
-             </button>
+                    <button class="choice_btn" type="button">
+                        <div class="meal_and_plus">
+                            <p class= "meal">Velouté de légumes d'antan </p>
+                        <p class="plus"> Carotte,panais,topinambour</p> 
+                        </div>
+                        <div class="price">35€</div> 
+                        <div class="valid"><i class="fas fa-check-circle"></i></div>
+                    </button>
 
-            <button type="button"><b>Soupe à l'oignon</b><br>Revisitée
-                  <p>20€</p>
-                  <div><i class="fas fa-check-circle"></i></div>
-             </button>
+                    <button class="choice_btn" type="button"> 
+                        <div class="meal_and_plus">
+                            <p class= "meal">Soupe à l'oignon </p>
+                        <p class="plus"> Revisitée</p> 
+                        </div>
+                        <div class="price">20€</div> 
+                        <div class="valid"><i class="fas fa-check-circle"></i></div>
+                    </button>
 
-        </article>
-        <article>
-            <h3><span>PLAT</span>S</h3>
-            <button type="button"><b>Coquilles Saint-Jacques</b><br>Accompagnées d'une purée de panais
-                     <p>40€</p>
-                     <div><i class="fas fa-check-circle"></i></div>
-            </button>
+                </article>
+                <article>
+                    <h3><span>PLAT</span>S</h3>
+                    <button class="choice_btn" type="button"> 
+                        <div class="meal_and_plus">
+                            <p class= "meal">Coquilles Saint-Jacques</p>
+                        <p class="plus">Accompagnées d'une purée de panais</p> 
+                        </div>
+                        <div class="price">40€</div> 
+                        <div class="valid"><i class="fas fa-check-circle"></i></div>
+                    </button>
 
-            <button type="button"><b>Magret de canard</b><br>Et parmentier de pommes de terres
-                <p>35€</p>
-                <div><i class="fas fa-check-circle"></i></div>
-             </button>
+                    <button class="choice_btn" type="button"> 
+                        <div class="meal_and_plus">
+                            <p class= "meal">Magret de canard </p>
+                        <p class="plus">Et parmentier de pommes de terre</p> 
+                        </div>
+                        <div class="price">35€</div> 
+                        <div class="valid"><i class="fas fa-check-circle"></i></div>
+                    </button>
 
-             <button type="button"><b>Pigeonneau d'Ille-et-Vilaine</b><br>Sur son lit de de gnocchis aux légumes
-                 <p>44€</p>
-                 <div><i class="fas fa-check-circle"></i></div>
-                 </button>
+                    <button class="choice_btn" type="button"> 
+                        <div class="meal_and_plus">
+                            <p class= "meal">Pigeonneau d'Ille-et-Vilaine</p>
+                        <p class="plus">Sur son lit de gnocchis aux légumes</p> 
+                        </div>
+                        <div class="price">25€</div> 
+                        <div class="valid"><i class="fas fa-check-circle"></i></div>
+                        </button>
 
-        </article>
+                </article>
 
-        <article>
-            <h3><span>DESS</span> ERTS</h3>
-            <button type="button"><b>Pétales de violettes glacés</b><br> Et purée de noisettes
-                 <p>18€</p>
-                 <div><i class="fas fa-check-circle"></i></div>
-             </button>
+                <article>
+                    <h3><span>DESS</span>ERTS</h3>
+                    <button class="choice_btn" type="button"> 
+                        <div class="meal_and_plus">
+                            <p class= "meal">Pétales de violettes glacés </p>
+                        <p class="plus"> Et purée de noisettes</p> 
+                        </div>
+                        <div class="price">18€</div> 
+                        <div class="valid"><i class="fas fa-check-circle"></i></div>
+                    </button>
 
-             <button type="button"><b>Fondant au chocolat </b><br>Revisité
-               <p>22€</p>
-               <div><i class="fas fa-check-circle"></i></div>
-                 </button>
+                    <button class="choice_btn" type="button"> 
+                        <div class="meal_and_plus">
+                            <p class= "meal">Fondant au chocolat</p>
+                        <p class="plus">Revisité</p> 
+                        </div>
+                        <div class="price">22€</div> 
+                    <div class="valid"><i class="fas fa-check-circle"></i></div>
+                        </button>
 
-            <button type="button"><b>Millefeuille croustillant</b><br>Myrtilles et pâte d'amande
-                   <p>23€</p>
-                   <div><i class="fas fa-check-circle"></i></div>
-                 </button>
+                    <button class="choice_btn" type="button"> 
+                        <div class="meal_and_plus">
+                            <p class= "meal">Millefeuille croustillant </p>
+                        <p class="plus"> Myrtilles et pâte d'amande</p> 
+                        </div>
+                        <div class="price">25€</div> 
+                        <div class="valid"><i class="fas fa-check-circle"></i></div>
+                    </button>
+                    
+                    <div class="order"><button class="btn_order" type="submit">Commander </button></div>
+                    
 
-             <button type="submit">Commander</button>
-
-        </article>
+                </article>
+            </section>
         
-    </section>
-    
-    <footer>
-        <h3>ohmyfood</h3>
-        <div>
-            <i class="fas fa-utensils"></i>
-            <p>Suggérer un réstaurant</p>
-         </div>
-         <div>
-            <i class="fas fa-hands-helping"></i>
-           <p>Devenez partenaire</p> 
-         </div>
-         <p>Mentions légales</p>
-         <a href="">Contact</a>
-    </footer>
+        
+        <footer>
+            <div class="foot">
+                <h3>ohmyfood</h3>
+                <div class="footer">
+                    <i class="fas fa-utensils"></i>
+                    <p>Suggérer un restaurant</p>
+                </div>
+                <div class="footer">
+                    <i class="fas fa-hands-helping"></i>
+                    <div> Devenez partenaire </div>
+                </div>
+                <p>Mentions légales</p>
+                <a href="">Contact</a>
+            </div>
+        </footer>
+    </div>
+
 </body>
 </html>

@@ -1,82 +1,144 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>ohmyfood: Le délice des sens</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/menu.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/05e841d70d.js" crossorigin="anonymous"></script>
+    <title>ohmyfood-Le délice des sens</title>
 </head>
 <body>
-    <header>
-        <h1>ohmyfood</h1>
-        <img src="../images/restaurants/le_delice_des_sens.jpg" alt="Menu du restaurant: le délice des sens">
-    </header>
+    <div class="wrap">
+            <header>
+                <h1>ohmyfood</h1>
+                <img src="../images/restaurants/le_delice_des_sens.jpg" alt="Menu du restaurant : Le délice des sens">
+            </header>
 
-    <section>
-        <h2> Le délice des sens</h2>
-        <button type="button"><i class="far fa-heart"></i></button>
-        <article>
-            <h3><span>ENTR</span>ÉES</h3>
+            <section>
+                
+                <div class="name">
+                    <h2>Le délice des sens</h2>
+                <button class="btn" type="button"><i class="far fa-heart"></i></button>
+                </div>
+                
+                <article>
+                    <h3><span>ENTR</span>ÉES</h3>
 
-            <button type="button"><b>Tartare de thon</b><br>Assaisonné au yuzu
-                <p>25€</p>
-                <div><i class="fas fa-check-circle"></i></div>
-                </button>
-            <button type="button"><b>Bouchée de homard croustillant</b><br>Et sa farandole de petits légumes
-                <p>35€</p>
-                <div><i class="fas fa-check-circle"></i></div>
-             </button>
-            <button type="button"><b>Velouté de cèpes</b><br>Aux truffes
-                <p>20€</p>
-                <div><i class="fas fa-check-circle"></i></div>
-             </button>
-        </article>
-        <article>
-            <h3><span>PLAT</span>S</h3>
-            <button type="button"><b>Poulet rôti aux herbes de provence</b><br>Et sa crème de truffe
-                <p>40€</p>
-                <div><i class="fas fa-check-circle"></i></div>
-            </button>
-            <button type="button"><b>Langouste rôtie</b><br>Et ses légumes de saison
-                <p>35€</p>
-                <div><i class="fas fa-check-circle"></i></div>
-             </button>
-             <button type="button"><b>Côte de boeuf angus</b><br>Et sa purée de panais
-            
-                <p>44€</p>
-                <div><i class="fas fa-check-circle"></i></div>
-            </button>
-        </article>
-        <article>
-                <h3><span>DESS</span>ERTS</h3>
-             <button type="button"><b>Farandole de desserts</b><br>Du chef
-                    <p>18€</p>
-                    <div><i class="fas fa-check-circle"></i></div>
-              </button>
-             <button type="button"><b>Crème brûlée</b><br>Revisitée
-                <p>22€</p>
-                <div><i class="fas fa-check-circle"></i></div>
-            </button>
-            <button type="button"><b>Tiramisu</b><br>À la noisette
-                <p>23€</p>
-                <div><i class="fas fa-check-circle"></i></div>
-            </button>
-             <button type="button">Commander</button>
-    </section>
-    <footer>
-        <h3>ohmyfood</h3>
-        <div>
-            <p>Suggérer un réstaurant</p>
-         </div>
-         <div>
-           <p>Devenez partenaire</p> 
-         </div>
-         <p>Droit</p>
-         <a href="">Contact</a>
-    </footer>
+                    <button class="choice_btn" type="button"> 
+                        <div class="meal_and_plus">
+                            <p class= "meal">Tartare de thon</p>
+                            <p class="plus">Assaisonné au yuzu</p> 
+                            </div>
+                        
+                        <div class="price">25€</div> 
+                        <div class="valid"><i class="fas fa-check-circle"></i></div>
+                    </button>
+
+                    <button class="choice_btn" type="button">
+                        <div class="meal_and_plus">
+                            <p class= "meal">Bouchée de homard croustillant </p>
+                        <p class="plus"> Et sa farandole de petits légumes</p> 
+                        </div>
+                        <div class="price">35€</div> 
+                        <div class="valid"><i class="fas fa-check-circle"></i></div>
+                    </button>
+
+                    <button class="choice_btn" type="button"> 
+                        <div class="meal_and_plus">
+                            <p class= "meal">Velouté de cèpes </p>
+                        <p class="plus">Aux truffes</p> 
+                        </div>
+                        <div class="price">20€</div> 
+                        <div class="valid"><i class="fas fa-check-circle"></i></div>
+                    </button>
+
+                </article>
+                <article>
+                    <h3><span>PLAT</span>S</h3>
+                    <button class="choice_btn" type="button"> 
+                        <div class="meal_and_plus">
+                            <p class= "meal">Poulet rôti aux herbes de provence</p>
+                        <p class="plus"> Et sa crème de truffe</p> 
+                        </div>
+                        <div class="price">40€</div> 
+                        <div class="valid"><i class="fas fa-check-circle"></i></div>
+                    </button>
+
+                    <button class="choice_btn" type="button"> 
+                        <div class="meal_and_plus">
+                            <p class= "meal">Langouste rôtie</p>
+                        <p class="plus"> Et ses légumes de saison</p> 
+                        </div>
+                        <div class="price">35€</div> 
+                        <div class="valid"><i class="fas fa-check-circle"></i></div>
+                    </button>
+
+                    <button class="choice_btn" type="button"> 
+                        <div class="meal_and_plus">
+                            <p class= "meal">Côte de boeuf angus </p>
+                        <p class="plus"> Et sa purée de panais</p> 
+                        </div>
+                        <div class="price">44€</div> 
+                        <div class="valid"><i class="fas fa-check-circle"></i></div>
+                        </button>
+
+                </article>
+
+                <article>
+                    <h3><span>DESS</span>ERTS</h3>
+                    <button class="choice_btn" type="button"> 
+                        <div class="meal_and_plus">
+                            <p class= "meal">Farandole de desserts</p>
+                        <p class="plus"> Du chef</p> 
+                        </div>
+                        <div class="price">18€</div> 
+                        <div class="valid"><i class="fas fa-check-circle"></i></div>
+                    </button>
+
+                    <button class="choice_btn" type="button"> 
+                        <div class="meal_and_plus">
+                            <p class= "meal">Crème brûlée</p>
+                        <p class="plus"> Revisitée</p> 
+                        </div>
+                        <div class="price">22€</div> 
+                    <div class="valid"><i class="fas fa-check-circle"></i></div>
+                        </button>
+
+                    <button class="choice_btn" type="button"> 
+                        <div class="meal_and_plus">
+                            <p class= "meal">Tiramisu</p>
+                        <p class="plus"> À la noisette</p> 
+                        </div>
+                        <div class="price">23€</div> 
+                        <div class="valid"><i class="fas fa-check-circle"></i></div>
+                    </button>
+                    
+                    <div class="order"><button class="btn_order" type="submit">Commander </button></div>
+                    
+
+                </article>
+        </div>
+        </section>
+        
+        <footer>
+            <div class="foot">
+                <h3>ohmyfood</h3>
+                <div class="footer">
+                    <i class="fas fa-utensils"></i>
+                    <p>Suggérer un restaurant</p>
+                </div>
+                <div class="footer">
+                    <i class="fas fa-hands-helping"></i>
+                    <div> Devenez partenaire </div>
+                </div>
+                <p>Mentions légales</p>
+                <a href="">Contact</a>
+            </div>
+        </footer>
+    </div>
+
 </body>
 </html>
