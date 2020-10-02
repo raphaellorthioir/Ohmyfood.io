@@ -1,6 +1,11 @@
 /*Général*/
+.wrap{
+    width:100%;
+    max-width: 1920px;
+    min-width: 300px;
+    margin: auto;
+}
 body{
-    width: 600px;
     margin: 0;
 }
 h1,.text_description,#title_description,#explore{
@@ -8,7 +13,6 @@ h1,.text_description,#title_description,#explore{
 }
 
 .text_description{
-    width: 500px;
     margin-bottom: 30px;
 }
 #description{
@@ -24,37 +28,42 @@ h1,.text_description,#title_description,#explore{
     padding: 3px 3px;
 }
 .title{
-    width: 100%;
-    margin: 30px;
+   margin-left: 20px;
 }
-.align{
-    margin: 20px;
-}
+
 /* Flex box*/
-#description,#gps,#localisation,.align,.step,.number,.function_step,.align_choice{
+#description,#gps,#localisation,.align,.step,.number,.background_step
+,figcaption,.name_and_place,footer,.footer,.foot{
+
     display: flex;
 }
-section,.align{
+section,.align,.name_and_place,footer,.foot{
     flex-direction: column;
 }
-#localisation,.step,.function_step{
+#gps,.step,.background_step,figcaption,.footer{
     flex-direction: row;
 }
-#description,#localisation,#gps{
+section,#description,#localisation,#gps,.number{
     justify-content: center;
     align-items: center;
 }
 /*GPS*/
-#localisation{
-    width:225px;
-    justify-content: space-around;
+
+#gps{
+    background-color: rgba(209, 209, 209, 0.301);
+    height: 50px;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.295) ;
+    font-family: 'Roboto', sans-serif;
+    color: rgba(0, 0, 0, 0.705);
+    justify-content:center;
+    font-size: 25px;
+  }
+  #gps i{
+    margin-right: 50px;
+    
 }
 /*Fonctionnement*/
-.align {
-    justify-content: space-between;
-    height: 400px;
 
-}
 
 .number{
     background-color: #9356DC;
@@ -64,48 +73,118 @@ section,.align{
     position: relative;
     left: 15px;
     top: 25px;
-    justify-content: center;
-    align-items: center;
+    
 }
 .step{
+    width: 100%;
     margin-top: 30px;
-    margin-right: 10px;
+   
 }
 .background_step{
-    width: 600px;
     height: 80px;
+    width: 100%;
+    padding-left: 7%;
     background-color: rgb(241, 241, 241);
     box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.205);
     border-radius:25px 25px;
+    justify-content: flex-start;
    }
-   .function_step{
-       width: 310px;
-       height: 50px;
-       margin-left: 30px;
-       margin-top: 15px;
-       justify-content: space-around;
-       align-items: center;
-   }
+.background_step i{
+    position: relative;
+    width: 30.08px;
+    top: 25px;
+    left: 10px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.background_step p{
+    position: relative;
+    left: 40px;
+    bottom: 2px;
+}
+  
 
    /*choix des restaurants*/
-   .align_choice{
+   #choice{
     background-color:rgba(192, 187, 187, 0.247);
-        justify-content: space-around;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    width: 100%;
     margin-top: 130px;
    }
-  figure img{
-       border-radius: 15px 15px 0 0;
+   #choice h2{
+       margin-left: 50px;
    }
-   figure .name{
-       border-radius: 0 0 15px 15px;
-   }
-   .name{
+  figure{
+       width: auto;
+       margin-top: 15px;
        background-color: white;
+       border: solid rgba(192, 187, 187, 0.247);
+       border-radius: 20px;
+       overflow: hidden;
    }
+   figure img{
+       width: 100%;
+        }
+   figcaption{
+       background-color: white;
+       height: 100px;
+       justify-content: space-between;
+       
+   }
+   .name_and_place{
+      
+       margin-top: 15px;
+       margin-left: 15px;
+ }
+   .btn{
+      border: none;
+      background-color: white;
+      width: auto;
+      height: auto;
+      cursor: pointer;
+      margin-right: 10px;
+   }
+   
+   .btn:focus {
+       outline:0;
+       
+   }
+   .btn i{
+       color: rgb(0, 0, 0);
+       font-size: 35px;
+      
+
+   }
+
+   /*Footer*/
+
+   footer{
+       background-color: rgb(48, 48, 48);
+       color: rgb(236, 236, 236);
+       padding-left: 30px;
+       padding-bottom: 30px; 
+       font-size: 18px;
+       font-family: 'Roboto', sans-serif;
+   }
+  
+   .footer{
+    height: 35px;
+    justify-content: flex-start;
+    align-items: center;
+   }
+   .footer i{
+       width: 15px;
+       margin-right: 20px;
+   }
+   a{
+    text-decoration: none;
+    color: white;
+}
+
 /*Images*/
 img{
-    width: 500px;
-    height: 300px;
+    width: 80%;
+    height: auto;
 }
 
 /*Polices*/
@@ -119,13 +198,13 @@ h1{
     font-size: 25px;
     font-family: 'Roboto', sans-serif;
 }
-.function_step{
+.background_step{
     font-family: 'Roboto', sans-serif;
-    font-size: 22px;
+    font-size: 25px;
 }
 #title_description,.title{
     font-family: 'Roboto', sans-serif;
-    font-size:40px;
+    font-size:35px;
 }
 .text_description{
     font-family: 'Roboto', sans-serif;
@@ -136,14 +215,20 @@ h1{
     font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 16px;
+    }
+.name{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size:25px ;
+}
+    .place{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 350;
+        font-size: 20px;
+    }
+ footer h3{
+    font-family: 'Shrikhand', cursive;
+    font-size: 20px;
     
-}
-/*gps*/
-
-#gps{
-  background-color: rgba(209, 209, 209, 0.301);
-  height: 50px;
-  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.295) ;
-  font-family: 'Roboto', sans-serif;
-  color: rgba(0, 0, 0, 0.705);
-}
+   
+ }
