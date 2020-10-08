@@ -11,6 +11,10 @@ img{
     width: 100%;
     }
 section{
+    display: block;
+    position: relative;
+    background-color:rgb(233, 232, 232);
+    bottom: 80px;
     border: solid rgba(0, 0, 0, 0);
     border-radius: 50px 50px 0 0;
     }
@@ -35,12 +39,7 @@ section{
 
 
 /*flex box*/
-section{
-    display: block;
-    position: relative;
-    background-color:rgb(233, 232, 232);
-    bottom: 80px;
-   }
+
 article,.name,.choice_btn,.meal_and_plus,.order,footer,.footer,.foot{
     display: flex;
 }
@@ -114,22 +113,25 @@ button{
     outline: none;
     overflow: hidden;
      }
-.btn {
+.btn{
     border: none;
     background-color:rgb(233, 232, 232) ;
     width:auto;
     height:auto;
     cursor:pointer;
-   
+    font-size: 35px;
     }
  .choice_btn{
+    
     height:90px;
-    background-color: rgb(241, 241, 241);
+   /* background-color: rgb(241, 241, 241);*/
     margin: 15px 20px;
     box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.199);
     border: solid rgba(0, 0, 0, 0);
     border-radius: 25px;
- }
+    }
+
+
  .choice_btn:hover{
      background-color: white;
      box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.555);
@@ -138,10 +140,7 @@ button{
      outline:0;
      
  }
- .btn i{
-     color: rgb(0, 0, 0);
-       font-size: 35px;
-    }
+ 
 
  .valid {
      visibility: hidden;
@@ -162,6 +161,13 @@ button{
 .btn_order:hover{
     box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.555);
     background: linear-gradient(#FF79DA ,#a365ee );
+}
+.fa-heart {
+    color: rgb(214, 214, 214);
+    transition:  color linear 1s ;
+}  
+.fa-heart:hover{
+    color:#FF79DA ;
 }
  /*footer*/
  
@@ -188,4 +194,37 @@ button{
 a{
  text-decoration: none;
  color: white;
+}
+/*animation*/
+
+.vision1{
+    animation-name: vision;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    
+ }
+ .vision2{
+     animation-name:vision;
+     animation-duration: 1.5s;
+     animation-delay: 0.2s;
+     animation-timing-function: ease;
+     animation-fill-mode: forwards;
+ }
+ .vision3{
+     animation-name: vision;
+     animation-duration: 1.5s;
+     animation-delay:0.3s ;
+     animation-timing-function: ease;
+     animation-fill-mode: forwards;
+ }
+@keyframes vision {
+    from{
+        opacity: 0;
+        
+    }
+    to{
+        opacity: 1;
+        margin-bottom: 1px;
+    }
 }
