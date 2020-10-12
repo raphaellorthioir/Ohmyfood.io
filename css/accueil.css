@@ -4,6 +4,7 @@
     max-width: 1920px;
     min-width: 300px;
     margin: auto;
+    animation: blur 3s linear  ;
 }
 body{
     margin: 0;
@@ -33,7 +34,7 @@ h1,.text_description,#title_description,#explore{
 
 /* Flex box*/
 #description,#gps,#localisation,.align,.step,.number,.background_step
-,figcaption,.name_and_place,footer,.footer,.foot{
+,figcaption,.name_and_place,footer,.footer,.foot,.spinner{
 
     display: flex;
 }
@@ -43,7 +44,10 @@ section,.align,.name_and_place,footer,.foot{
 #gps,.step,.background_step,figcaption,.footer{
     flex-direction: row;
 }
-section,#description,#localisation,#gps,.number{
+.background_step{
+    align-items: center;
+}
+section,#description,#localisation,#gps,.number,.spinner{
     justify-content: center;
     align-items: center;
 }
@@ -82,25 +86,21 @@ section,#description,#localisation,#gps,.number{
 }
 .background_step{
     height: 80px;
-    width: 100%;
+    width: 80%;
     padding-left: 7%;
     background-color: rgb(241, 241, 241);
-    box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.205);
+    box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.39);
     border-radius:25px 25px;
-    justify-content: flex-start;
+   
    }
 .background_step i{
-    position: relative;
-    width: 30.08px;
-    top: 25px;
-    left: 10px;
+    
+    width:40px;
+    margin-right: 20px;
+    margin-left: 10px;
     color: rgba(0, 0, 0, 0.5);
 }
-.background_step p{
-    position: relative;
-    left: 40px;
-    bottom: 2px;
-}
+
   
 
    /*choix des restaurants*/
@@ -234,22 +234,124 @@ h1{
     
    
  }
+ /*spinner*/
+ .spinner{
+     z-index: 1;
+     display: block;
+     position: fixed;
+     margin: auto;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     top: 0;
+     width: 100px;
+     height: 100px;
+     
 
- /*abimations*/
-/*   @keyframes fullheart{
+     }
+.spin{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    color: #99E2D0 ;
+    font-size: 100px;
+    
 
-         0% {
-             height: 0;
-            background-color: white;
+    animation: spinner 3s ease  normal forwards;
+}
+/*animations*/
 
-        }
-        100% {
-            height: 100%;
-            background-color: red;
-        }
-   }
- .heart{
-       background-color: red;
-       animation-name: fullheart;
-       animation-fill-mode: forwards;
-   }*/
+@keyframes spinner{
+    0%{  color: #99E2D0 ;
+        transform: origin 0;
+        transform: rotate(360deg);
+        opacity: 1;
+        font-size:100px ;
+       
+    }
+    
+    95%{
+        
+        opacity: 1;
+    }
+    100%{ color:#9356DC;
+        display: none;
+        opacity: 0;
+    }
+}
+@keyframes supprim{
+    from{
+        display: block;
+    }
+    to{
+        display: none;
+    }
+}
+@keyframes blur{
+    0%{
+        filter: blur(40px);
+    }
+    90%{
+        filter: blur(40px);
+    }
+    %100{
+        filter:blur(0px)
+    }
+}
+/*media querries*/
+
+@media screen and (max-width:600px){
+ .step p{
+     font-size: 5vw;
+     
+ }
+ 
+.name{
+    font-size: 5vw;
+
+}      
+.place{
+    font-size: 4vw;
+}
+.btn{
+    font-size: 10vw;
+    margin-right: 30px;
+}
+}
+
+ @media screen and (max-width:400px)  {
+     .btn{
+        margin-right: 10px;
+     
+     }
+       
+ }
+ @media screen and (min-width:600px){
+    
+    body{
+        width: 70%;
+        margin: auto;
+    }
+
+    .background_step{
+         width: 400px;
+     }
+     .step{
+         justify-content: center;
+     }
+        #choice{
+            display: flex;
+        flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         
+     }
+     figure{
+         width: 50%;
+     }
+    }
