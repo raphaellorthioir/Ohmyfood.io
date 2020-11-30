@@ -87,6 +87,7 @@ span{
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 600;
+    
    
 }
 .btn_order{
@@ -315,6 +316,7 @@ a{
     }
     .price{
         font-size: 3.5vw;
+        
     }
 .choice_btn{
     height: 70px;
@@ -356,6 +358,9 @@ footer i{
     .name h2,i{
         margin-right: 50px;
         font-size: 50px;
+    }
+    .valid i{
+        margin: auto;
     }
     footer i{
         font-size: 20px;
