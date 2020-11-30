@@ -21,45 +21,35 @@ section{
 .name{
     padding: 0 15px;
 }
-.meal_and_plus{
-    width:100%;
-    height: auto;
-}
-.meal{
-    margin: 3px;
-}
-.plus{
-    margin: 3px;
-}
-.price{
-    display: block;
-    position: relative;
-    top: 40px;
-}
+
+
 
 
 /*flex box*/
 
-article,.name,.choice_btn,.meal_and_plus,.order,footer,.footer,.foot{
+article,.name,.choice_btn,.meal_and_plus,.plus,.order,.valid,footer,.footer,.foot{
     display: flex;
 }
-.name,.choice_btn,.order,.footer{
+.name,.choice_btn,.plus,.order,.footer{
     flex-direction: row;
 
 }
-article,.meal_and_plus,footer,.foot{
+article,.meal_and_plus,.valid,footer,.foot{
     flex-direction: column;
 }
-.name,.choice_btn{
+.name{
     justify-content: space-around;
 }
-.meal{
+.choice_btn{
+    justify-content: space-between;
+}
+.meal,.plus{
     justify-content:flex-start;
 }
 .meal_and_plus{
     align-items: baseline;
 }
-.order{
+.order,.valid{
     justify-content: center;
     align-items: center;
 }
@@ -92,10 +82,12 @@ span{
     font-size:20px ;
     font-weight: 500;
 }
+
 .price{
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 600;
+   
 }
 .btn_order{
     font-family: 'Roboto', sans-serif;
@@ -112,23 +104,30 @@ button{
     background-color: white;
     outline: none;
     overflow: hidden;
-     }
-.btn{
     border: none;
-    background-color:rgb(233, 232, 232) ;
+     }
+
+.btn{
+    border:none;
+    background-color:rgb(233,232,232) ;
     width:auto;
     height:auto;
     cursor:pointer;
     font-size: 35px;
+    
     }
  .choice_btn{
-    
     height:90px;
-   /* background-color: rgb(241, 241, 241);*/
-    margin: 15px 20px;
+    width:auto;
+    background-color: rgb(241, 241, 241);
+    margin: 5px ;
     box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.199);
-    border: solid rgba(0, 0, 0, 0);
     border-radius: 25px;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    visibility: hidden;
+    
     }
 
 
@@ -136,14 +135,54 @@ button{
      background-color: white;
      box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.555);
  }
- .btn:focus {
-     outline:0;
-     
+ .meal_and_plus{
+    width:100%;
+    height: auto;
+    margin: 5px 5px;
+    overflow: hidden;
+    white-space: nowrap; 
+     overflow: hidden;
+    
+    
+  
  }
- 
 
+
+
+.meal{
+    width: auto;
+    margin: 3px;
+    
+}
+ .plus{
+     width: auto; 
+     white-space: nowrap; 
+     overflow: hidden;
+     text-overflow: ellipsis;
+    margin: 3px;
+}
+.price{
+    display: block;
+    position: relative;
+    top: 43px;
+    margin-right: 5px;
+    
+    
+}
  .valid {
-     visibility: hidden;
+     position: relative;
+     left:50px ;
+    width:0px;
+    height: 100%;
+    font-size: 30px;
+    background-color:#99E2D0 ;
+    padding: none;
+    color: white;
+    
+ }
+
+ .choice_btn:focus .valid{
+    animation: valid 1s ease  forwards;
  }
  .btn_order{
     border: none;
@@ -168,6 +207,9 @@ button{
 }  
 .fa-heart:hover{
     color:#FF79DA ;
+}
+.choice_btn:focus .fa-check-circle{
+    animation: rotation 2s ease 0.3s  forwards;
 }
  /*footer*/
  
@@ -199,32 +241,88 @@ a{
 
 .vision1{
     animation-name: vision;
-    animation-duration: 1.5s;
+    animation-duration: 1s;
+    animation-delay: 300ms;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
-    
+    position: relative;
  }
  .vision2{
      animation-name:vision;
-     animation-duration: 1.5s;
-     animation-delay: 0.2s;
+     animation-duration: 1s;
+     animation-delay: 500ms;
      animation-timing-function: ease;
      animation-fill-mode: forwards;
+     position: relative;
  }
  .vision3{
      animation-name: vision;
-     animation-duration: 1.5s;
-     animation-delay:0.3s ;
-     animation-timing-function: ease;
+     animation-duration: 1s;
+     animation-delay: 700ms ;
+     animation-timing-function:ease;
      animation-fill-mode: forwards;
+     position: relative;
  }
 @keyframes vision {
-    from{
+    0%{
         opacity: 0;
+        bottom: 0px;
         
     }
-    to{
+    
+    100%{
         opacity: 1;
-        margin-bottom: 1px;
+        bottom:2px ;
+        visibility: visible;
+        
     }
+}
+
+ @keyframes valid{
+ 0%{
+     width: 0%;
+     left: 100px;
+     
+}
+100%{
+    width: 30%;
+    left: 0;
+    margin-left: 10px;
+}
+}
+@keyframes rotation{
+
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(360deg);
+
+    }
+    50%{
+        
+        transform: scale(1.5);
+    }
+    
+}
+
+@media screen and (max-width:520px){
+    p{
+        font-size: 3vw;
+    }
+    .meal_and_plus p{
+        font-size:3.5vw ;
+    }
+    .price{
+        font-size: 3.5vw;
+    }
+.choice_btn{
+    height: 70px;
+}
+h2{
+    font-size: 8vw;
+}
+footer i{
+    font-size: 5vw;
+}
 }
