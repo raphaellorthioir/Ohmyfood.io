@@ -306,7 +306,7 @@ a{
     
 }
 
-@media screen and (max-width:520px){
+@media screen and (max-width:620px){
     p{
         font-size: 3vw;
     }
@@ -325,4 +325,39 @@ h2{
 footer i{
     font-size: 5vw;
 }
+}
+
+@media screen and (min-width:620px){
+
+    h1{
+      font-size: 100px;
+    }
+    
+    .choice_btn{
+        width: 500px;
+    }
+    article {
+        justify-content: center;
+        align-items: center;
+        margin:none;
+    }
+  #small_choice{
+      display: block;
+      position: relative;
+     top:100px;
+    }
+
+    .name{
+        justify-content:flex-start;
+        align-items: center;
+        margin-left: 30px;
+        
+    }
+    .name h2,i{
+        margin-right: 50px;
+        font-size: 50px;
+    }
+    footer i{
+        font-size: 20px;
+    }
 }
