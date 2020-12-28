@@ -53,7 +53,13 @@ article,.meal_and_plus,.valid,footer,.foot{
     justify-content: center;
     align-items: center;
 }
+
+
+
 /*polices*/
+
+
+
 h1{
     text-align: center;
     margin: auto;
@@ -100,7 +106,12 @@ footer h3{
     font-size: 20px;
     }
 
+
+
 /* buttons*/ 
+
+
+
 button{
     background-color: white;
     outline: none;
@@ -116,7 +127,8 @@ button{
     cursor:pointer;
     font-size: 35px;
     
-    }
+    }*
+    
  .choice_btn{
     height:90px;
     width:auto;
@@ -136,55 +148,52 @@ button{
      background-color: white;
      box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.555);
  }
+
  .meal_and_plus{
-    width:100%;
-    height: auto;
+     width:100%;
     margin: 5px 5px;
     overflow: hidden;
     white-space: nowrap; 
-     overflow: hidden;
-    
-    
-  
- }
+    text-overflow:ellipsis;
+}
 
-
-
-.meal{
+ 
+  .meal{
     width: auto;
+    height: auto;
     margin: 3px;
-    
-}
+    }
+
  .plus{
-     width: auto; 
-     white-space: nowrap; 
-     overflow: hidden;
-     text-overflow: ellipsis;
-    margin: 3px;
-}
+     width: auto;
+     height: auto;
+     margin: 3px 0;
+     }
+
 .price{
     display: block;
     position: relative;
+    width:auto;
+    height: auto;
     top: 43px;
     margin-right: 5px;
-    
-    
-}
+    }
+
  .valid {
-     position: relative;
-     left:50px ;
+    position: relative;
+    left:50px ;
     width:0px;
     height: 100%;
     font-size: 30px;
     background-color:#99E2D0 ;
     padding: none;
     color: white;
-    
- }
+    }
 
  .choice_btn:focus .valid{
     animation: valid 1s ease  forwards;
  }
+
  .btn_order{
     border: none;
     border-radius: 35px 35px;
@@ -198,21 +207,30 @@ button{
     outline: none;
     box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.199);
     }
+
 .btn_order:hover{
     box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.555);
     background: linear-gradient(#FF79DA ,#a365ee );
 }
+
 .fa-heart {
     color: rgb(214, 214, 214);
     transition:  color linear 1s ;
 }  
+
 .fa-heart:hover{
     color:#FF79DA ;
 }
+
 .choice_btn:focus .fa-check-circle{
     animation: rotation 2s ease 0.3s  forwards;
 }
+
+
+
  /*footer*/
+
+
  
  footer{
     background-color: rgb(48, 48, 48);
@@ -238,7 +256,10 @@ a{
  text-decoration: none;
  color: white;
 }
+
+
 /*animation*/
+
 
 .vision1{
     animation-name: vision;
@@ -248,6 +269,7 @@ a{
     animation-fill-mode: forwards;
     position: relative;
  }
+
  .vision2{
      animation-name:vision;
      animation-duration: 1s;
@@ -256,6 +278,7 @@ a{
      animation-fill-mode: forwards;
      position: relative;
  }
+
  .vision3{
      animation-name: vision;
      animation-duration: 1s;
@@ -264,6 +287,7 @@ a{
      animation-fill-mode: forwards;
      position: relative;
  }
+ 
 @keyframes vision {
     0%{
         opacity: 0;

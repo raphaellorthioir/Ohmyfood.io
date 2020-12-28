@@ -1,37 +1,87 @@
 /*Général*/
-.wrap{
-    width:100%;
-    max-width: 1920px;
-    min-width: 300px;
-    margin: auto;
-    animation: blur 3s linear  ;
-}
+
+
 body{
     margin: 0;
-}
-h1,.text_description,#title_description,#explore{
+    
+    
+    }
+h1,#text_description,#title_description,#explore{
     text-align: center;
 }
-
-.text_description{
+.title{
+    margin-left: 20px;
+    margin-top: 60px;
     margin-bottom: 30px;
-}
+ }
+
+/* Section " desciption" */
+
+
 #description{
-    background-color:rgba(192, 187, 187, 0.247);
-    padding: 35px 0;
+    background-color:rgba(192, 187, 187, 0.164);
+    
 }
+#title_description{
+    margin: 0;
+    margin-top: 50px;
+}
+
+
 #explore{
-    border-radius: 25px 25px;
+    border-radius: 30px 30px;
+    border: none;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.342);
     background: linear-gradient(#FF79DA ,#9356DC );
-    width: 230px;
-    height: 50px;
+    width: 270px;
+    height: 60px;
     padding: 3px 3px;
+    margin-top: 20px;
+    margin-bottom: 80px;
 }
-.title{
-   margin-left: 20px;
+#explore p{
+    margin: 0;
+    margin-top: 18px;
+}
+ #explore:hover{
+    box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.555);
+    background: linear-gradient(#FF79DA ,#a365ee );
 }
 
+
+/* Section "Fonctionnement"*/
+
+
+
+.background_step{
+    height: 80px;
+    width: 80%;
+    padding-left: 7%;
+    background-color: rgb(241, 241, 241);
+    box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.25);
+    border-radius:25px 25px;
+   
+   }
+.background_step i{
+    
+    width:auto;
+    margin-right: 30px;
+    margin-left: 10px;
+    color: rgba(0, 0, 0, 0.5);
+    transition: color linear 200ms;
+}
+.background_step:hover{
+  background-color: #9256dc25;
+
+}
+.background_step:hover i{
+    
+    color: #9356DC;
+}
+
+header{
+    padding: 10px;
+}
 /* Flex box*/
 #description,#gps,#localisation,.align,.step,.number,.background_step
 ,figcaption,.name_and_place,footer,.footer,.foot,.spinner{
@@ -54,21 +104,25 @@ section,#description,#localisation,#gps,.number,.spinner{
 /*GPS*/
 
 #gps{
-    background-color: rgba(209, 209, 209, 0.301);
+    background-color: rgba(209, 209, 209, 0.5);
     height: 50px;
-    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.295) ;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.158) ;
     font-family: 'Roboto', sans-serif;
-    color: rgba(0, 0, 0, 0.705);
+    color: rgba(0, 0, 0, 0.699);
     justify-content:center;
-    font-size: 25px;
+    font-size: 23px;
+    padding: 10px;
   }
   #gps i{
-    margin-right: 50px;
+    margin-right: 30px;
     
 }
 /*Fonctionnement*/
 
-
+#fonction{
+    background-color: white;
+    padding-bottom: 50px;
+}
 .number{
     background-color: #9356DC;
     border-radius: 50%;
@@ -81,29 +135,20 @@ section,#description,#localisation,#gps,.number,.spinner{
 }
 .step{
     width: 100%;
-    margin-top: 30px;
+    margin-top: 40px;
    
-}
-.background_step{
-    height: 80px;
-    width: 80%;
-    padding-left: 7%;
-    background-color: rgb(241, 241, 241);
-    box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.39);
-    border-radius:25px 25px;
-   
-   }
-.background_step i{
-    
-    width:40px;
-    margin-right: 20px;
-    margin-left: 10px;
-    color: rgba(0, 0, 0, 0.5);
 }
 
   
 
    /*choix des restaurants*/
+
+
+   #restaurants{
+       background-color:rgba(192, 187, 187, 0.164);
+       padding-bottom: 70px;
+       padding-top: 20px;
+   }
    #choice{
     background-color:rgba(192, 187, 187, 0.247);
     padding-top: 30px;
@@ -115,7 +160,10 @@ section,#description,#localisation,#gps,.number,.spinner{
        margin-left: 50px;
    }
   figure{
+      position: relative;
        width: auto;
+       height: auto;
+       margin: 0 20px;
        margin-top: 15px;
        background-color: white;
        border: solid rgba(192, 187, 187, 0.247);
@@ -127,60 +175,89 @@ section,#description,#localisation,#gps,.number,.spinner{
         }
    figcaption{
        background-color: white;
-       height: 100px;
+       height: auto;
+       width: auto;
+       padding: 10px;
        justify-content: space-between;
        
    }
+  
+   .new{
+       position: absolute;
+       width: 100px;
+       height: 25px;
+       z-index: 1;
+       background-color: #bdf3e5;
+       color:rgb(0,128,107);
+       border-radius: 4px;
+       font-size: 17px;
+       font-family: 'Roboto',sans-serif;
+       text-align: center;
+       left: 72%;
+       right: 0;
+       top: 5%;
+       bottom: 0;
+       padding-top: 5px;
+   }
    .name_and_place{
-      
-       margin-top: 15px;
-       margin-left: 15px;
+       margin-left: 10px;
+       
+ }
+ .place{
+     position: relative;
+     bottom: 15px;
  }
    .btn{
       border: none;
       background-color: white;
-      width: 40px;
-      height:40px;
-      margin-right: 30px;
-      margin-top: 20px;
-      font-size: 40px;
+      width: auto;
+      height:50px;
+      margin-right: 10px;
+      font-size: 30px;
       cursor: pointer;
       outline: none;
       
-   }
+      }
  
-    
-.fa-heart {
-    color: rgb(214, 214, 214);
+   .btn i {
+      
+       color: rgb(196, 196, 196);
+      
+     
+   } 
+.btn:hover i{
     transition:  color linear 1s ;
+    color: #9356DC;
+    
 }  
-.fa-heart:hover{
-    color:#FF79DA ;
-}
+
+
 /*Footer*/
 
    footer{
-       background-color: rgb(48, 48, 48);
+    background-color: rgb(51 48 48);
        color: rgb(236, 236, 236);
        padding-left: 30px;
        padding-bottom: 30px; 
-       font-size: 18px;
        font-family: 'Roboto', sans-serif;
    }
   
    .footer{
-    height: 35px;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: 10px;
    }
+  
    .footer i{
        width: 15px;
-       margin-right: 20px;
+       margin-right: 10px;
+       font-size: 15px;
    }
    
    a{
     text-decoration: none;
     color: white;
+    margin-top: 10px;
 }
 
 /*Images*/
@@ -193,8 +270,9 @@ img{
 
 h1{
     font-family: 'Shrikhand', cursive;
-    font-size: 50px;
+    font-size: 40px;
     margin: 0;
+    padding: 5px;
 }
 #localisation{
     font-size: 25px;
@@ -202,41 +280,57 @@ h1{
 }
 .background_step{
     font-family: 'Roboto', sans-serif;
-    font-size: 25px;
+   
 }
+.background_step i{
+    font-size: 25px;
+    
+}
+
 #title_description,.title{
     font-family: 'Roboto', sans-serif;
     font-size:35px;
 }
-.text_description{
+#text_description{
     font-family: 'Roboto', sans-serif;
-    font-weight: 100;
-    font-size: 29px;
+    font-weight: 400;
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.507);
 }
-#explore,.number{
+#explore{
     font-family: 'Roboto', sans-serif;
     color: white;
-    font-size: 16px;
+    font-size: 20px;
+    }
+    .number{
+        font-family: 'Roboto', sans-serif;
+        color: white;
+        font-size: 17px;
     }
 .name{
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    font-size:25px ;
+    font-size:15px ;
 }
     .place{
         font-family: 'Roboto', sans-serif;
         font-weight: 350;
         font-size: 20px;
     }
- footer h3{
+  h3{
     font-family: 'Shrikhand', cursive;
     font-size: 20px;
     
    
  }
  /*spinner*/
+ .blur{
+     display: block;
+     width: 100%;
+     height: 100%;
+    animation: blur 3s normal forwards;
+ }
  .spinner{
-     z-index: 1;
      display: block;
      position: fixed;
      margin: auto;
@@ -247,10 +341,11 @@ h1{
      width: 100px;
      height: 100px;
      visibility: visible;
-
-     }
      
+}
+
 .spin{
+    z-index: 1;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -261,8 +356,11 @@ h1{
     height: 100px;
     color: #99E2D0 ;
     font-size: 100px;
-     animation: spinner 3s ease  normal forwards;
+    animation: spinner 3s ease  normal forwards;
+    
+     
 }
+
 
 
 /*animations*/
@@ -303,37 +401,65 @@ h1{
 /*media querries*/
 
 @media screen and (max-width:600px){
+
+    .title{
+        font-size: 30px;
+    }
  .step p{
-     font-size: 5vw;
+     font-size: 4.5vw;
      
  }
  
 .name{
-    font-size: 5vw;
+    font-size: 4.5vw;
 
 }      
 .place{
-    font-size: 4vw;
-}
-.btn{
-    font-size: 10vw;
-    margin-right: 30px;
-}
+    font-size:4vw;
 }
 
- @media screen and (max-width:400px)  {
-     .btn{
-        margin-right: 10px;
-     
+}
+
+    
+ @media screen and (max-width:440px){
+
+    .new{
+        left: 65%;
+    }
+    #gps{
+        font-size: 20px;
+    }
+    strong{
+        font-size: 28px;
+    }
+    #title_description{
+        margin: none;
+    }
+    #text_description{
+
+        font-size: 16px;
+    }
+    #explore{
+        font-size: 17px;
+        width: 220px;
+        height: 50px;
+        
+    }
+    #explore p{
+        margin-top: 15px;
+    }
+ }
+ @media screen and (max-width:370px){
+     .new{
+         left: 55%;
      }
-       
+     .btn{
+         font-size: 25px;
+         height: 30px;
+     }
  }
  @media screen and (min-width:600px){
     
-    body{
-        width: 70%;
-        margin: auto;
-    }
 
     .background_step{
          width: 400px;
@@ -348,7 +474,15 @@ h1{
          align-items: center;
          
      }
+     #restaurants{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+     }
      figure{
          width: 50%;
      }
+    
     }
