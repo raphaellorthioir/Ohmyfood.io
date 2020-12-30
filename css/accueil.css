@@ -1,49 +1,78 @@
 /*Général*/
 
 
-body{
+body
+{
     margin: 0;
-    
-    
-    }
-h1,#text_description,#title_description,#explore{
+    font-size: 1em;
+}
+
+ header
+ {
+     padding: 5px;
+ }   
+
+
+h1,#text_description,#title_description,#explore
+{
     text-align: center;
 }
-.title{
+
+.title
+{
     margin-left: 20px;
     margin-top: 60px;
     margin-bottom: 30px;
+    font-size: 30px;
  }
 
-/* Section " desciption" */
+
+ /* Section " desciption" */
 
 
-#description{
+#description
+
+{
     background-color:rgba(192, 187, 187, 0.164);
-    
 }
-#title_description{
+
+#title_description
+{
     margin: 0;
     margin-top: 50px;
+    font-size: 25px;
+}
+#text_description
+{
+    font-weight: 300;
+    font-size: 19px;
+    color: rgb(0, 0, 0);
 }
 
 
-#explore{
+#explore
+{
+    width: 230px;
+    height: 50px;
+    color: white;
+    font-size: 17px;
     border-radius: 30px 30px;
     border: none;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.342);
     background: linear-gradient(#FF79DA ,#9356DC );
-    width: 270px;
-    height: 60px;
     padding: 3px 3px;
     margin-top: 20px;
     margin-bottom: 80px;
 }
-#explore p{
+
+#explore p
+{
     margin: 0;
-    margin-top: 18px;
+    margin-top: 15px;
 }
- #explore:hover{
+
+ #explore:hover
+{
     box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.555);
     background: linear-gradient(#FF79DA ,#a365ee );
 }
@@ -53,89 +82,113 @@ h1,#text_description,#title_description,#explore{
 
 
 
-.background_step{
-    height: 80px;
-    width: 80%;
+.background_step
+{
+    height: 65px;
+    width: 320px;
     padding-left: 7%;
     background-color: rgb(241, 241, 241);
     box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.25);
     border-radius:25px 25px;
-   
-   }
-.background_step i{
+    cursor: pointer;
+ }
+
+.background_step i
+{
     
-    width:auto;
-    margin-right: 30px;
+    width:15px;
+    font-size: 20px;
+    margin-right: 25px;
     margin-left: 10px;
     color: rgba(0, 0, 0, 0.5);
     transition: color linear 200ms;
 }
+
 .background_step:hover{
   background-color: #9256dc25;
-
 }
-.background_step:hover i{
-    
+
+.background_step:hover i
+{
     color: #9356DC;
 }
 
-header{
-    padding: 10px;
-}
+
 /* Flex box*/
 #description,#gps,#localisation,.align,.step,.number,.background_step
-,figcaption,.name_and_place,footer,.footer,.foot,.spinner{
-
-    display: flex;
+,figcaption,.name_and_place,footer,.footer,.foot,.spinner
+{
+ display: flex;
 }
-section,.align,.name_and_place,footer,.foot{
+
+section,.align,.name_and_place,footer,.foot
+{
     flex-direction: column;
 }
-#gps,.step,.background_step,figcaption,.footer{
+
+#gps,.step,.background_step,figcaption,.footer
+{
     flex-direction: row;
 }
-.background_step{
+.background_step
+{
     align-items: center;
 }
-section,#description,#localisation,#gps,.number,.spinner{
+#description,#localisation,#gps,.number,.spinner
+{
     justify-content: center;
     align-items: center;
 }
+
+
+
+
 /*GPS*/
 
-#gps{
+#gps
+{
     background-color: rgba(209, 209, 209, 0.5);
     height: 50px;
     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.158) ;
     font-family: 'Roboto', sans-serif;
+    font-weight: 600;
     color: rgba(0, 0, 0, 0.699);
     justify-content:center;
-    font-size: 23px;
+    font-size: 17px;
     padding: 10px;
-  }
-  #gps i{
-    margin-right: 30px;
-    
 }
+  #gps i
+{
+    margin-right: 20px;
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+
+
+
 /*Fonctionnement*/
 
-#fonction{
+#fonction
+{
     background-color: white;
     padding-bottom: 50px;
 }
-.number{
+
+.number
+{
     background-color: #9356DC;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     position: relative;
     left: 15px;
-    top: 25px;
-    
+    top: 20px;
 }
-.step{
+.step
+{
     width: 100%;
-    margin-top: 40px;
+    margin-top: 20px;
    
 }
 
@@ -143,23 +196,29 @@ section,#description,#localisation,#gps,.number,.spinner{
 
    /*choix des restaurants*/
 
-
-   #restaurants{
+ #restaurants
+ {
        background-color:rgba(192, 187, 187, 0.164);
        padding-bottom: 70px;
        padding-top: 20px;
-   }
-   #choice{
+ }
+
+ #choice
+ {
     background-color:rgba(192, 187, 187, 0.247);
     padding-top: 30px;
     padding-bottom: 60px;
     width: 100%;
     margin-top: 130px;
-   }
-   #choice h2{
+ }
+
+ #choice h2
+{
        margin-left: 50px;
-   }
-  figure{
+ }
+
+figure
+{
       position: relative;
        width: auto;
        height: auto;
@@ -169,20 +228,24 @@ section,#description,#localisation,#gps,.number,.spinner{
        border: solid rgba(192, 187, 187, 0.247);
        border-radius: 20px;
        overflow: hidden;
-   }
-   figure img{
-       width: 100%;
-        }
-   figcaption{
-       background-color: white;
-       height: auto;
-       width: auto;
-       padding: 10px;
-       justify-content: space-between;
-       
-   }
+ }
+
+   figure img
+{
+    width: 100%;
+}
+
+figcaption
+{
+     background-color: white;
+      height: 50px;
+      width: auto;
+      padding: 7px;
+      justify-content: space-between;
+ }
   
-   .new{
+.new
+{
        position: absolute;
        width: 100px;
        height: 25px;
@@ -198,140 +261,169 @@ section,#description,#localisation,#gps,.number,.spinner{
        top: 5%;
        bottom: 0;
        padding-top: 5px;
-   }
-   .name_and_place{
-       margin-left: 10px;
-       
+       margin: none ;
  }
- .place{
+   
+ .name_and_place
+ {
+       margin-left: 10px;
+  }
+
+ .place
+ {
      position: relative;
      bottom: 15px;
  }
-   .btn{
-      border: none;
-      background-color: white;
-      width: auto;
-      height:50px;
-      margin-right: 10px;
-      font-size: 30px;
-      cursor: pointer;
-      outline: none;
-      
-      }
+
+  .btn
+ {
+        width: auto;
+        height:50px;
+        position: relative;
+        bottom: 8px;
+        right: 10px;
+        border: none;
+        background-color: white;
+        font-size: 22px;
+        cursor: pointer;
+        outline: none;
+        -webkit-text-stroke:1px black;
+}
  
-   .btn i {
-      
-       color: rgb(196, 196, 196);
-      
-     
-   } 
-.btn:hover i{
-    transition:  color linear 1s ;
-    color: #9356DC;
-    
-}  
+   .btn i 
+   {
+    color: white;
+   }
+ 
 
 
 /*Footer*/
 
-   footer{
+
+
+ footer
+ {
     background-color: rgb(51 48 48);
-       color: rgb(236, 236, 236);
-       padding-left: 30px;
-       padding-bottom: 30px; 
-       font-family: 'Roboto', sans-serif;
-   }
+     color: rgb(236, 236, 236);
+     padding-left: 30px;
+     padding-bottom: 30px; 
+     font-family: 'Roboto', sans-serif;
+}
   
-   .footer{
+.footer
+{
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 10px;
-   }
+}
   
-   .footer i{
+.footer i
+ {
        width: 15px;
        margin-right: 10px;
        font-size: 15px;
-   }
+  }
    
-   a{
+ a
+ {
     text-decoration: none;
     color: white;
     margin-top: 10px;
 }
 
+
+
+
+
 /*Images*/
-img{
+
+
+img
+{
     width: 80%;
     height: auto;
 }
 
+
+
+
 /*Polices*/
 
-h1{
+h1
+{
     font-family: 'Shrikhand', cursive;
-    font-size: 40px;
+    font-size: 28px;
     margin: 0;
     padding: 5px;
 }
-#localisation{
+#localisation
+{
     font-size: 25px;
     font-family: 'Roboto', sans-serif;
 }
-.background_step{
+.background_step
+{
     font-family: 'Roboto', sans-serif;
-   
-}
-.background_step i{
-    font-size: 25px;
-    
+   font-size: 1em;
 }
 
-#title_description,.title{
+#title_description,.title
+{
     font-family: 'Roboto', sans-serif;
-    font-size:35px;
 }
-#text_description{
+#text_description
+{
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 22px;
-    color: rgba(0, 0, 0, 0.507);
 }
-#explore{
+   
+#explore 
+{
     font-family: 'Roboto', sans-serif;
-    color: white;
-    font-size: 20px;
-    }
-    .number{
-        font-family: 'Roboto', sans-serif;
-        color: white;
-        font-size: 17px;
-    }
-.name{
+    
+}
+ .number
+ {
+     font-family: 'Roboto', sans-serif;
+     color: white;
+      font-size: 13px;
+ }
+.name
+{
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    font-size:15px ;
+    font-size:18px ;
 }
-    .place{
-        font-family: 'Roboto', sans-serif;
-        font-weight: 350;
-        font-size: 20px;
-    }
-  h3{
+.place
+{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 350;
+  font-size: 17px;
+ }
+
+ h3
+ {
     font-family: 'Shrikhand', cursive;
     font-size: 20px;
-    
-   
- }
+}
+
+
+
+
  /*spinner*/
- .blur{
+
+
+
+
+ .blur
+ {
      z-index: 2;
      display: block;
      width: 100%;
      height: 100%;
     animation: blur 3s normal forwards;
  }
- .spinner{
+ .spinner
+ {
      z-index: 1;
      display: block;
      position: fixed;
@@ -346,7 +438,8 @@ h1{
      
 }
 
-.spin{
+.spin
+{
     z-index: 2;
     position: absolute;
     top: 0;
@@ -359,8 +452,6 @@ h1{
     color: #99E2D0 ;
     font-size: 100px;
     animation: spinner 3s ease  normal forwards;
-    
-     
 }
 
 
@@ -402,7 +493,7 @@ h1{
 }
 /*media querries*/
 
-@media screen and (max-width:600px){
+/* @media screen and (max-width:600px){
 
     .title{
         font-size: 30px;
@@ -420,71 +511,33 @@ h1{
     font-size:4vw;
 }
 
-}
+} */
 
+
+ @media screen and (min-width:320px) and (max-width:600px){
     
- @media screen and (max-width:440px){
 
     .new{
-        left: 65%;
-    }
-    #gps{
-        font-size: 20px;
-    }
-    strong{
-        font-size: 28px;
-    }
-    #title_description{
-        margin: none;
-    }
-    #text_description{
-
-        font-size: 16px;
-    }
-    #explore{
-        font-size: 17px;
-        width: 220px;
-        height: 50px;
-        
-    }
-    #explore p{
-        margin-top: 15px;
-    }
- }
- @media screen and (max-width:370px){
-     .new{
          left: 55%;
      }
-     .btn{
-         font-size: 25px;
-         height: 30px;
-     }
- }
- @media screen and (min-width:600px){
     
-
-    .background_step{
-         width: 300px;
+  .background_step{
+        margin-right: 15px;
      }
-     .step{
-         justify-content: center;
-     }
-        #choice{
-            display: flex;
-        flex-direction: column;
-         justify-content: center;
-         align-items: center;
-         
-     }
-     #restaurants{
-
-        display: flex;
+    
+    .step{
+        justify-content: center;
+    }
+       #choice{
+           display: flex;
+       flex-direction: column;
         justify-content: center;
         align-items: center;
-        
-     }
-     figure{
-         width: 50%;
-     }
-    
+       }
+       footer{
+           font-size: 18px;
+       }
     }
+  
+   
+    
