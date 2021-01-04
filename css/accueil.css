@@ -19,7 +19,7 @@ body
     padding: 5px;
  }
 
- h3
+ h2
  {
    font-size: 20px;
 }
@@ -238,7 +238,8 @@ section,.align,.name_and_place,footer,.foot
   
 
                                              /*choix des restaurants*/
-
+                                           
+                                     
  #restaurants
  {
        background-color:rgba(192, 187, 187, 0.164);
@@ -380,7 +381,9 @@ figcaption
      padding-bottom: 30px; 
      font-family: 'Roboto', sans-serif;
 }
-  
+  footer h2{
+    font-family: 'Shrikhand', cursive;
+  }
 .footer
 {
     justify-content: flex-start;
@@ -718,7 +721,7 @@ h1,h3
          height: 30px;
          font-size: 20px;
      }
-     h3{
+     h2{
          font-size: 35px;
      }
      .footer i{
