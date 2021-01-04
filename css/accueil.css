@@ -1,4 +1,4 @@
-/*Général*/
+                                                    /*Général*/
 
 
 body
@@ -12,7 +12,22 @@ body
      padding: 5px;
  }   
 
+ h1
+ {
+    font-size: 40px;
+    margin: 0;
+    padding: 5px;
+ }
 
+ h3
+ {
+   font-size: 20px;
+}
+
+ #localisation
+ {
+    font-size: 25px;
+ }
 h1,#text_description,#title_description,#explore
 {
     text-align: center;
@@ -27,7 +42,26 @@ h1,#text_description,#title_description,#explore
  }
 
 
- /* Section " desciption" */
+
+                                                    /*Position*/
+
+
+ .number,figure,.place,.btn
+ {
+    position: relative;
+
+ }
+
+ .new,.spin
+ {
+     position:absolute;
+ }
+
+
+
+                                                /* Section " description" */
+
+
 
 
 #description
@@ -78,7 +112,7 @@ h1,#text_description,#title_description,#explore
 }
 
 
-/* Section "Fonctionnement"*/
+                                        /* Section "Fonctionnement"*/
 
 
 
@@ -114,7 +148,13 @@ h1,#text_description,#title_description,#explore
 }
 
 
-/* Flex box*/
+
+
+                                                /* Flex box*/
+
+
+
+
 #description,#gps,#localisation,.align,.step,.number,.background_step
 ,figcaption,.name_and_place,footer,.footer,.foot,.spinner
 {
@@ -143,7 +183,8 @@ section,.align,.name_and_place,footer,.foot
 
 
 
-/*GPS*/
+                                                    /*GPS*/
+
 
 #gps
 {
@@ -167,7 +208,7 @@ section,.align,.name_and_place,footer,.foot
 
 
 
-/*Fonctionnement*/
+                                                /*Fonctionnement*/
 
 #fonction
 {
@@ -181,10 +222,12 @@ section,.align,.name_and_place,footer,.foot
     border-radius: 50%;
     width: 25px;
     height: 25px;
-    position: relative;
     left: 15px;
     top: 20px;
+    color: white;
+    font-size: 13px;
 }
+
 .step
 {
     width: 100%;
@@ -194,7 +237,7 @@ section,.align,.name_and_place,footer,.foot
 
   
 
-   /*choix des restaurants*/
+                                             /*choix des restaurants*/
 
  #restaurants
  {
@@ -219,7 +262,6 @@ section,.align,.name_and_place,footer,.foot
 
 figure
 {
-      position: relative;
        width: auto;
        height: auto;
        margin: 0 20px;
@@ -233,12 +275,13 @@ figure
    figure img
 {
     width: 100%;
+    
 }
 
 figcaption
 {
      background-color: white;
-      height: 50px;
+      height: auto;
       width: auto;
       padding: 7px;
       justify-content: space-between;
@@ -246,20 +289,15 @@ figcaption
   
 .new
 {
-       position: absolute;
        width: 100px;
        height: 25px;
-       z-index: 1;
        background-color: #bdf3e5;
        color:rgb(0,128,107);
        border-radius: 4px;
        font-size: 17px;
-       font-family: 'Roboto',sans-serif;
        text-align: center;
-       left: 72%;
-       right: 0;
+       right: 5%;
        top: 5%;
-       bottom: 0;
        padding-top: 5px;
        margin: none ;
  }
@@ -268,34 +306,67 @@ figcaption
  {
        margin-left: 10px;
   }
-
+.name
+{
+    font-weight: bold;
+    font-size:18px ;
+}
  .place
  {
-     position: relative;
      bottom: 15px;
+     font-weight: 350;
+     font-size: 17px;
  }
+
+
 
   .btn
  {
         width: auto;
         height:50px;
-        position: relative;
         bottom: 8px;
         right: 10px;
         border: none;
-        background-color: white;
         font-size: 22px;
         cursor: pointer;
         outline: none;
-        -webkit-text-stroke:1px black;
+        background:white;
+        -webkit-text-stroke:1px black; 
+        
 }
- 
-   .btn i 
-   {
-    color: white;
-   }
- 
 
+   .visible_heart{
+    display: block;
+    position: absolute;
+    top: 5%;
+    right: 30%; 
+    color: white;
+    opacity: 1;
+    margin-top: 15px;
+   
+  
+}
+ .invisible_heart{
+    position: absolute;
+    top: 35%;
+    right: 25%;
+    display: none;
+    -webkit-text-stroke:none;
+    background:-webkit-linear-gradient(90deg, #ff79da, #9356dc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(0);
+    transition: transform 0.5s linear 0s ;
+    
+}
+
+.btn:focus .invisible_heart{
+    display: block;
+    z-index: 1;
+    transform: scale(1);
+   
+    
+}
 
 /*Footer*/
 
@@ -335,7 +406,7 @@ figcaption
 
 
 
-/*Images*/
+                                                    /*Images*/
 
 
 img
@@ -347,81 +418,38 @@ img
 
 
 
-/*Polices*/
+                                                    /*Polices*/
 
-h1
+
+
+
+#localisation,.background_step,#title_description,.title,#text_description,#explore,.number,.name,.place,.new
+{
+    font-family: 'Roboto', sans-serif;
+}
+h1,h3
 {
     font-family: 'Shrikhand', cursive;
-    font-size: 28px;
-    margin: 0;
-    padding: 5px;
-}
-#localisation
-{
-    font-size: 25px;
-    font-family: 'Roboto', sans-serif;
-}
-.background_step
-{
-    font-family: 'Roboto', sans-serif;
-   font-size: 1em;
-}
-
-#title_description,.title
-{
-    font-family: 'Roboto', sans-serif;
-}
-#text_description
-{
-    font-family: 'Roboto', sans-serif;
-}
-   
-#explore 
-{
-    font-family: 'Roboto', sans-serif;
-    
-}
- .number
- {
-     font-family: 'Roboto', sans-serif;
-     color: white;
-      font-size: 13px;
- }
-.name
-{
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size:18px ;
-}
-.place
-{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 350;
-  font-size: 17px;
- }
-
- h3
- {
-    font-family: 'Shrikhand', cursive;
-    font-size: 20px;
 }
 
 
 
 
- /*spinner*/
+
+
+                                                        /*spinner*/
 
 
 
 
  .blur
  {
-     z-index: 2;
      display: block;
      width: 100%;
      height: 100%;
-    animation: blur 3s normal forwards;
+     animation: blur 3s normal forwards;
  }
+
  .spinner
  {
      z-index: 1;
@@ -435,109 +463,276 @@ h1
      width: 100px;
      height: 100px;
      visibility: visible;
-     
 }
 
 .spin
 {
-    z-index: 2;
-    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    margin: auto;
     width: 100px;
     height: 100px;
     color: #99E2D0 ;
     font-size: 100px;
     animation: spinner 3s ease  normal forwards;
+
 }
 
 
 
-/*animations*/
+
+                                                /*animations*/
+
+
+
+
 
 @keyframes spinner{
-    0%{  color: #99E2D0 ;
+
+    0% { 
+         color: #99E2D0 ;
         transform: origin 0;
         transform: rotate(360deg);
         opacity: 1;
         font-size:100px ;
- }
-    
-    95%{
-        
-        opacity: 1;
     }
-    100%{
-       
-         color:#9356DC;
+    
+    95% {
+         opacity: 1;
+         }
+
+    100% {
+        color:#9356DC;
         opacity: 0;
         display: none;
-        
-        
-    }
+         }
 }
 
 @keyframes blur{
-    0%{
+
+    0% {
         filter: blur(40px);
     }
-    90%{
+    90% {
         filter: blur(40px);
     }
-    100%{ 
+    100% { 
         filter:blur(0px);
     }
 }
-/*media querries*/
-
-/* @media screen and (max-width:600px){
-
-    .title{
-        font-size: 30px;
-    }
- .step p{
-     font-size: 4.5vw;
-     
- }
- 
-.name{
-    font-size: 4.5vw;
-
-}      
-.place{
-    font-size:4vw;
-}
-
-} */
 
 
- @media screen and (min-width:320px) and (max-width:600px){
+
+
+                                                            /* RESPONSIVE*/
+
+
+
+
+
+
+
+ @media screen and (min-width:320px) and (max-width:600px)
+ {
     
+    .background_step{
 
-    .new{
-         left: 55%;
-     }
-    
-  .background_step{
         margin-right: 15px;
      }
     
     .step{
+
         justify-content: center;
     }
-       #choice{
-           display: flex;
-       flex-direction: column;
+     #choice{
+
+         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+
        }
-       footer{
-           font-size: 18px;
+
+     footer{
+
+        font-size: 18px;
+
        }
+}
+
+  @media screen and (min-width:601px) and (max-width:1023px) {
+    h1{
+        font-size:50px ;
     }
-  
-   
+    #gps{
+        font-size: 30px;
+    }
+    #gps i{
+        font-size: 25px;
+    }
+    #title_description{
+
+        font-size: 45px;
+    }
+    #text_description{
+
+        font-size: 30px;
+    }
+    #explore{
+
+        width: 370px;
+        height: 60px;
+        font-size: 26px;
+    }
+    .title{
+      
+        font-size: 40px;
+    }
+    #fonction{
+
+        text-align: center;
+    }
+    .step{
+        align-items: center;
+        justify-content: center;
+    }
+    .background_step{
+
+            height: 90px;
+            width: 500px;
+            padding-left: 40px;
+    }
+    .number{
+        width: 35px;
+        height: 35px;
+        top:0;
+    }
+    .background_step i {
+
+        font-size: 30px;
+        margin-right: 40px;
+    }
+    .background_step p{
+
+        font-size: 25px;
+    }
+    figure{
+        width: 60%;
+    }
+    #restaurants{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    h3 {
+        font-size: 40px;
+    }
+    figcaption{
+        height: 60px;
+
+    }
+    .name{
+        font-size: 25px;
+    }
+    .place{
+        font-size: 23px;
+    }
+    footer{
+        font-size: 25px;
+    }
+    .footer i{
+        font-size: 20px;
+        margin-right: 25px;
+    }
+    .btn{
+        font-size: 30px;
+    }
+  }
+@media screen and (min-width:1024px) and (max-width:1920px)
+{
+    h1{
+        font-size: 50px;
+    }
+    #gps
+    {
+        font-size: 30px;
+    }
+    #gps i{
+        font-size: 30px;
+
+    }
+    .desktop_screen_flex_row{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: auto;
+        height: auto;
+    }
+    #desktop_screen_flex_column_left{
+        
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 30% ;
+    }
+        
+    .step{
+        justify-content: center;
+    }
+    .desktop_screen_flex_column{
+
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+     #restaurants{
+         display: flex;
+        flex-direction: column;
+        width: auto;
+        padding: 0;
+    } 
+    
+    figure{
+        width: 500px;
+        height:auto;
+    }
+     figure img{
+
+        width: 100%;
+        height: 75%;
+     }
+     .name{
+         font-size: 25;
+     }
+     .place{
+         font-size: 25px;
+     }
+     .btn{
+         font-size: 35px;
+     }
+     .new{
+         width: 125px;
+         height: 30px;
+         font-size: 20px;
+     }
+     h3{
+         font-size: 35px;
+     }
+     .footer i{
+         font-size: 20px;
+         margin-right: 25px;
+     }
+     .footer{
+         font-size: 20px;
+     }
+     .rights{
+         font-size: 20px;
+     }
+     footer a{
+         font-size: 20px;
+     }
+}
     

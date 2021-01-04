@@ -15,11 +15,11 @@
     </div>
     <div class="blur">
     
-        <!-- En tête-->
+ <!-- En tête-->
         <header>
             <h1>ohmyfood</h1>
         </header>
-        <!--Localisation-->
+<!--Localisation-->
         <section>
             <div id="gps"> <!--Box with local logo and place-->
                 <i class="fas fa-map-marker-alt"></i> <div id="location">Paris,Belleville</div>
@@ -27,114 +27,129 @@
         
          </section>
          
-        <!--Description-->
+ <!--Description-->
+        <div class="desktop_screen_flex_row">
 
-        <section id="description"> <!-- box describing the concept and button wich links to the part " Restaurant"-->
+            <div id="desktop_screen_flex_column_left">
 
-            <p id="title_description"><strong >Réservez le menu qui <br> vous convient</strong></p>
-            <p id="text_description"> Découvrez des restaurants d'exception,<br> séléctionnés par nos soins.</p>
-             <a href="#restaurants" id="explore"><p>Explorez nos restaurants</p> </a>
-        </section>
+                <section id="description"> <!-- box describing the concept and button wich links to the part " Restaurant"-->
 
-        <!--Partie fonctionnement-->
+                    <p id="title_description"><strong >Réservez le menu qui <br> vous convient</strong></p>
+                    <p id="text_description"> Découvrez des restaurants d'exception,<br> séléctionnés par nos soins.</p>
+                    <a href="#restaurants" id="explore"><p>Explorez nos restaurants</p> </a>
+                </section>
 
-        <section id="fonction" >
+  <!--Partie fonctionnement-->
             
-            <h2 class="title"> Fonctionnement</h2>
-            
+                <section id="fonction" >
+                    
+                    <h2 class="title"> Fonctionnement</h2>
+                    
+                        
+                    <div class="step">
+                        <div class="number">1</div> 
+                        <div class="background_step">
+                            <i class="fas fa-mobile-alt"></i> <p>Choisissez un restaurant</p> 
+                        </div> 
+                    </div>
+
+                    <div class="step">
+                        <div class="number">2</div> 
+                        <div class="background_step">
+                            <i class="fas fa-list-ul"></i> <p>Composez votre menu</p> 
+                        </div>
+                    </div>
+                        
+                    <div class="step">
+                        <div class="number">3</div> 
+                        <div class="background_step">
+                            <i class="fas fa-store"></i><p>Dégustez au restaurant</p> 
+                        </div>
+                    </div>
+                </section>
+             </div>   
+
+  <!--Choix des restaurants-->
+
+            <section  id="restaurants" >
+
+                <h2 class="title">Restaurants</h2>
                 
-             <div class="step">
-                 <div class="number">1</div> 
-                 <div class="background_step">
-                     <i class="fas fa-mobile-alt"></i> <p>Choisissez un restaurant</p> 
-                 </div> 
-             </div>
+                <div class="desktop_screen_flex_row">
 
-             <div class="step">
-                 <div class="number">2</div> 
-                 <div class="background_step">
-                     <i class="fas fa-list-ul"></i> <p>Composez votre menu</p> 
-                 </div>
-             </div>
-                   
-             <div class="step">
-                 <div class="number">3</div> 
-                 <div class="background_step">
-                     <i class="fas fa-store"></i><p>Dégustez au restaurant</p> 
-                 </div>
-             </div>
-         </section>
+                    <figure> <!--Image and possibility tu put some text below like restaurant name, location and a like button-->
 
-        <!--Choix des restaurants-->
+                        <a href="html/la_pallette_du_gout.html"> <!-- Link to the menu-->
+                            <img src="images/accueil_restaurants/la_palette_du_gout.jpg" alt="restaurant: la palette du goût" >
+                        </a>
+                        <div class="new"> Nouveau</div> <!--  The "new" alert -->
 
-        <section  id="restaurants" id="choice ">
+                        <figcaption> <!-- Use to put some text and feature below the image-->
 
-            <h2 class="title">Restaurants</h2>
-            
-             <figure> <!--Image and possibility tu put some text below like restaurant name, location and a like button-->
+                            <div class="name_and_place"> <!--box: Name and location about the restaurant-->
+                                <div class="name" >La palette du goût </div><br>
+                                <div class="place">Ménilmontant</div> 
+                            </div>
+                            <button class="btn" type="button">
+                                <i class="fas fa-heart visible_heart"></i><i class="fas fa-heart invisible_heart"></i>
+                                </button>
+                            <!--Button to send a script wich register costumer's preferences . 
+                                Transition between an empty heart letting appear a full other one with a scale growth    -->
+                        </figcaption>
+                    </figure>
 
-                <a href="html/la_pallette_du_gout.html"> <!-- Link to the menu-->
-                     <img src="images/accueil_restaurants/la_palette_du_gout.jpg" alt="restaurant: la palette du goût" >
-                 </a>
-                 <div class="new"> Nouveau</div> <!--  The "new" alert -->
+                    <figure>
+                        <a class="container" href="html/la_note_enchantee.html"><!-- Link to the menu-->
+                            <img src="images/accueil_restaurants/accueil_la_note_enchantee.jpg" alt="Restaurant: la note enchantée">
+                        </a>
+                        <div class="new"> Nouveau</div>
 
-                <figcaption> <!-- Use to put some text and feature below the image-->
+                        <figcaption> 
+                            <div class="name_and_place">
+                                <div class="name" >La note enchantée </div><br>
+                                <div class="place">Charonne</div> 
+                            </div>
+                            <button class="btn" type="button">
+                                <i class="fas fa-heart visible_heart"></i><i class="fas fa-heart invisible_heart"></i></button>
+                        </figcaption>
+                    </figure>
+                </div>
 
-                     <div class="name_and_place"> <!--box: Name and location about the restaurant-->
-                         <div class="name" >La palette du goût </div><br>
-                         <div class="place">Ménilmontant</div> 
-                     </div>
-                     <button class="btn" type="button"><i class="fas fa-heart "></i> <i class="fas fa-heart "></i></button>
-                     <!--Button to send a script wich register costumer's preferences . 
-                        Transition between an empty heart letting appear an other wich fill itself with color  -->
-                </figcaption>
-              </figure>
+                <div class="desktop_screen_flex_row">
 
-            <figure>
-                <a class="container" href="html/la_note_enchantee.html"><!-- Link to the menu-->
-                     <img src="images/accueil_restaurants/accueil_la_note_enchantee.jpg" alt="Restaurant: la note enchantée">
-                 </a>
-                 <div class="new"> Nouveau</div>
+                    <figure>
+                        <a href="html/a_la_francaise.html"><!-- Link to the menu-->
+                            <img src="images/accueil_restaurants/a_la_francaise.jpg" alt="Restaurant: À la française">  
+                        </a>
 
-                 <figcaption> 
-                    <div class="name_and_place">
-                        <div class="name" >La note enchantée </div><br>
-                        <div class="place">Charonne</div> 
-                    </div>
-                    <button class="btn" type="button"><i class="fas fa-heart"></i></button>
-                 </figcaption>
-             </figure>
+                        <figcaption> 
+                            <div class="name_and_place">
+                                <div class="name" >À la française </div><br>
+                                <div class="place">Cité rouge</div> 
+                            </div>
+                            <button class="btn" type="button">
+                                <i class="fas fa-heart visible_heart"></i><i class="fas fa-heart invisible_heart"></i></button>
+                        </figcaption>
+                    </figure>
 
-            <figure>
-                <a href="html/a_la_francaise.html"><!-- Link to the menu-->
-                    <img src="images/accueil_restaurants/a_la_francaise.jpg" alt="Restaurant: À la française">  
-                </a>
+                    <figure>
+                        <a href="html/le_delice_des_sens.html"><!-- Lien vers menu-->
+                            <img src="images/accueil_restaurants/le_delice_des_sens.jpg" alt="restaurant: le délice des le dé licedes sens">
+                        </a>
 
-                <figcaption> 
-                    <div class="name_and_place">
-                         <div class="name" >À la française </div><br>
-                         <div class="place">Cité rouge</div> 
-                     </div>
-                    <button class="btn" type="button"><i class="fas fa-heart"></i></button>
-                </figcaption>
-             </figure>
-
-            <figure>
-                <a href="html/le_delice_des_sens.html"><!-- Lien vers menu-->
-                     <img src="images/accueil_restaurants/le_delice_des_sens.jpg" alt="restaurant: le délice des le dé licedes sens">
-                </a>
-
-                <figcaption>
-                     <div class="name_and_place">
-                        <div class="name" >La palette du goût </div><br>
-                         <div class="place">Folie-Méricourt</div> 
-                    </div>
-                    <button class="btn" type="button"><i class="fas fa-heart"></i></button>
-                </figcaption>
-            </figure>
-        </section>
-
-        <!--Partie footer-->
+                        <figcaption>
+                            <div class="name_and_place">
+                                <div class="name" >La palette du goût </div><br>
+                                <div class="place">Folie-Méricourt</div> 
+                            </div>
+                            <button class="btn" type="button">
+                                <i class="fas fa-heart visible_heart"></i><i class="fas fa-heart invisible_heart"></i></button>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+        </div>
+  <!--Partie footer-->
 
         <footer> <!--Four links -->
              <div class="foot">
@@ -147,7 +162,7 @@
                     <i class="fas fa-hands-helping"></i>
                     <div> Devenez partenaire </div>
                 </div>
-                <div>Mentions légales</div>
+                <div class="rights">Mentions légales</div>
                 <a href="">Contact</a>
             </div>
         </footer>
