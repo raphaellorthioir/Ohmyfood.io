@@ -5,7 +5,22 @@ body
 {
     margin: 0;
     font-size: 1em;
+    animation: overflow 10s ease  normal;
+    
 }
+
+/*No scroll duyring spinner*/
+
+@keyframes overflow{
+    0%{
+        overflow: hidden;
+    }
+   
+    100%{
+        overflow: visible;
+    }
+}
+
 
  header
  {
@@ -21,7 +36,7 @@ body
 
  h2
  {
-   font-size: 20px;
+   font-size: 30px;
 }
 
  #localisation
@@ -41,10 +56,91 @@ h1,#text_description,#title_description,#explore
     font-size: 30px;
  }
 
+  /*opacity on page during the spinner*/
+
+ .screen_load
+ {   
+     
+    visibility: hidden;
+    opacity: 0;
+    animation: load_page 1s ease normal forwards 3s;
+     transition: display;
+ }
+ 
+
+ @keyframes load_page{
+     0%{
+         
+         visibility: hidden;
+         opacity: 0;
+     }
+     100%{
+        
+         visibility: visible;
+         opacity: 1;
+     }
+ }
+
+ .spinner
+ {
+     
+    display: block;
+    visibility: visible;
+     position: absolute;
+     margin: auto;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     top: 0;
+     width: 100px;
+     height: 100px;
+     animation: display 3s ease normal forwards;
+     -webkit-animation: display 3s ease normal forwards;
+}
+
+.spin
+{   
+    display: block;
+    color: #99E2D0 ;
+    font-size: 100px;
+    animation: spinner 3s ease  normal forwards;
+    -webkit-animation: spinner 3s ease normal forwards;
+    
+}
 
 
+@keyframes spinner{
+
+    0% { visibility: visible;
+         color: #99E2D0 ;
+        transform: origin 0;
+        transform: rotate(360deg);
+        opacity: 1;
+        font-size:100px ;
+    }
+    
+    95% {
+         opacity: 1;
+         }
+
+    100% {
+        visibility: hidden;
+        color:#9356DC;
+        opacity: 0;
+        display: none;
+         }
+}
                                                     /*Position*/
-
+@keyframes display{
+    from{
+        visibility: visible;
+        display: block;
+    }
+    to{
+        visibility: hidden;
+        display: none;
+    }
+}
 
  .number,figure,.place,.btn
  {
@@ -141,6 +237,9 @@ h1,#text_description,#title_description,#explore
 .background_step:hover{
   background-color: #9256dc25;
 }
+-moz-.background_step:hover{
+    background-color: #9256dc25;
+}
 
 .background_step:hover i
 {
@@ -180,7 +279,9 @@ section,.align,.name_and_place,footer,.foot
     align-items: center;
 }
 
-
+.name_and_place{
+    justify-content: space-between;
+}
 
 
                                                     /*GPS*/
@@ -311,6 +412,7 @@ figcaption
 {
     font-weight: bold;
     font-size:18px ;
+    margin-bottom: 20px;
 }
  .place
  {
@@ -350,13 +452,13 @@ figcaption
  .invisible_heart{
     position: absolute;
     top: 35%;
-    right: 25%;
+    right: 4px;
     display: none;
     -webkit-text-stroke:none;
     background:-webkit-linear-gradient(90deg, #ff79da, #9356dc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transform: scale(0);
+   -webkit-transform: scale(0);
     transition: transform 0.5s linear 0s ;
     
 }
@@ -364,7 +466,7 @@ figcaption
 .btn:focus .invisible_heart{
     display: block;
     z-index: 1;
-    transform: scale(1);
+    -webkit-transform: scale(1);
    
     
 }
@@ -440,94 +542,6 @@ h1,h3
 
 
 
-                                                        /*spinner*/
-
-
-
-
- .blur
- {
-     display: block;
-     width: 100%;
-     height: 100%;
-     animation: blur 3s normal forwards;
- }
-
- .spinner
- {
-     z-index: 1;
-     display: block;
-     position: fixed;
-     margin: auto;
-     bottom: 0;
-     left: 0;
-     right: 0;
-     top: 0;
-     width: 100px;
-     height: 100px;
-     visibility: visible;
-}
-
-.spin
-{
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100px;
-    height: 100px;
-    color: #99E2D0 ;
-    font-size: 100px;
-    animation: spinner 3s ease  normal forwards;
-
-}
-
-
-
-
-                                                /*animations*/
-
-
-
-
-
-@keyframes spinner{
-
-    0% { 
-         color: #99E2D0 ;
-        transform: origin 0;
-        transform: rotate(360deg);
-        opacity: 1;
-        font-size:100px ;
-    }
-    
-    95% {
-         opacity: 1;
-         }
-
-    100% {
-        color:#9356DC;
-        opacity: 0;
-        display: none;
-         }
-}
-
-@keyframes blur{
-
-    0% {
-        filter: blur(40px);
-    }
-    90% {
-        filter: blur(40px);
-    }
-    100% { 
-        filter:blur(0px);
-    }
-}
-
-
-
-
                                                             /* RESPONSIVE*/
 
 
@@ -536,8 +550,8 @@ h1,h3
 
 
 
- @media screen and (min-width:320px) and (max-width:600px)
- {
+ @media screen and (min-width:320px) and (max-width:600px){
+ 
     
     .background_step{
 
@@ -620,9 +634,7 @@ h1,h3
 
         font-size: 25px;
     }
-    figure{
-        width: 60%;
-    }
+    
     #restaurants{
 
         display: flex;
@@ -653,7 +665,7 @@ h1,h3
         font-size: 30px;
     }
   }
-@media screen and (min-width:1024px) and (max-width:1920px)
+@media screen and (min-width:1024px) 
 {
     h1{
         font-size: 50px;
@@ -669,7 +681,7 @@ h1,h3
     .desktop_screen_flex_row{
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-around;
         width: auto;
         height: auto;
     }
@@ -678,9 +690,22 @@ h1,h3
         display: flex;
         flex-direction: column;
         height: auto;
-        width: 30% ;
+        width: 35% ;
     }
-        
+    #description{
+        background-color: white;
+    }
+    #fonction{
+        padding-right: 15px;
+
+    }
+     .title{
+         margin: none;
+         margin-left: 50px;
+     }   
+     .background_step{
+         width: 300px;
+     }
     .step{
         justify-content: center;
     }
@@ -694,12 +719,13 @@ h1,h3
      #restaurants{
          display: flex;
         flex-direction: column;
-        width: auto;
-        padding: 0;
+        width:100%;
+        padding-bottom: 30px;
+        padding-top: 0;
     } 
     
     figure{
-        width: 500px;
+        width: 40%;
         height:auto;
     }
      figure img{
@@ -711,10 +737,10 @@ h1,h3
          font-size: 25;
      }
      .place{
-         font-size: 25px;
+         font-size: 17px;
      }
      .btn{
-         font-size: 35px;
+         font-size: 25px;
      }
      .new{
          width: 125px;

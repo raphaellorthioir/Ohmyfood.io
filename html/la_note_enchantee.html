@@ -11,17 +11,23 @@
     <title>ohmyfood- La note enchantée</title>
 </head>
 <body>
-    <div class="wrap">
+    
             <header>
+                <a href="../index.html">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
                 <h1>ohmyfood</h1>
-                <img src="../images/restaurants/la_note_enchantee.jpg" alt="Menu du restaurant : La note enchantée">
-            </header>
-
+             </header>
+             <img src="../images/restaurants/la_note_enchantee.jpg" alt="Menu du restaurant : La note enchantée">
+            <div id="desktop_name">
+             <h2>La note enchantée</h2>
+             <button class="btn" type="button"><i class="fas fa-heart visible_heart"></i><i class="fas fa-heart invisible_heart"></i></button>
+            </div>
             <section>
                 
-                <div class="name">
+                <div class="name_and_heart_btn">
                     <h2>La note enchantée</h2>
-                <button class="btn" type="button"><i class="fas fa-heart"></i></button>
+                <button class="btn" type="button"><i class="fas fa-heart visible_heart"></i><i class="fas fa-heart invisible_heart"></i></button>
                 </div>
                 
                 <article>
@@ -125,11 +131,9 @@
                         <div class="price">25€</div> 
                         <div class="valid"><i class="fas fa-check-circle"></i></div>
                     </button>
-                    
-                    <div class="order"><button class="btn_order" type="submit">Commander </button></div>
                 </article>
         </section>
-        
+        <div class="order"><button class="btn_order" type="submit">Commander </button></div>
         <footer>
             <div class="foot">
                 <h3>ohmyfood</h3>
@@ -145,7 +149,7 @@
                 <a href="">Contact</a>
             </div>
         </footer>
-</div>
+
 
 </body>
 </html>

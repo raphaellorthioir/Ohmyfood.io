@@ -1,10 +1,11 @@
 /*Général*/
 body{
     margin: auto;
-    
+    background-color:rgb(233, 232, 232);
 }
 header{
-    height: 60px;
+    padding: 5px;
+    background-color: white;
 }
 header a{
     position: absolute;
@@ -34,10 +35,10 @@ section{
 
 /*flex box*/
 
-header,article,.name_and_heart_btn,.choice_btn,.meal_and_plus,.plus,.order,.valid,footer,.footer,.foot{
+header,article,#desktop_name,.name_and_heart_btn,.choice_btn,.meal_and_plus,.plus,.order,.valid,footer,.footer,.foot{
     display: flex;
 }
-header,.name_and_heart_btn,.choice_btn,.plus,.order,.footer{
+header,#desktop_name,.name_and_heart_btn,.choice_btn,.plus,.order,.footer{
     flex-direction: row;
 
 }
@@ -45,7 +46,7 @@ article,.meal_and_plus,.valid,footer,.foot{
     flex-direction: column;
 }
 
-.choice_btn,.name_and_heart_btn{
+.choice_btn,#desktop_name,.name_and_heart_btn{
     justify-content: space-between;
 }
 .meal,.plus{
@@ -77,7 +78,8 @@ h3{
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 500;
-    margin-left: 20px;
+    margin-left:20px
+    
 }
 span{
     border-bottom: solid 2px #99E2D0 ;
@@ -108,7 +110,8 @@ span{
 }
  footer h3{
     font-family: 'Shrikhand', cursive;
-    font-size: 20px;
+    font-size: 30px;
+    margin: 20px 0;
     }
 
 
@@ -228,9 +231,13 @@ button{
     }
 
  .choice_btn:focus .valid{
-    animation: valid 1s ease  forwards;
+   -webkit-animation: valid 1s ease  forwards;
  }
-
+.order{
+    width: auto;
+    margin-bottom: 100px;
+    
+}
  .btn_order{
     border: none;
     border-radius: 35px 35px;
@@ -239,8 +246,6 @@ button{
     color: white;
     width: 300px;
     height:70px;
-    padding: 3px 3px;
-    margin-top: 50px;
     outline: none;
     box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.199);
     }
@@ -270,6 +275,7 @@ button{
      padding-bottom: 30px; 
      font-family: 'Roboto', sans-serif;
      font-weight: 600;
+     font-size: 20px;
 }
 
 .footer
@@ -364,24 +370,86 @@ button{
     }
     
 }
-@media screen and (max-width:450px){
 
-    .plus{
-        font-size: 15px;
+@media screen and (max-width:340px){
+    #desktop_name{
+        display: none;
+    }
+    .choice_btn{
+        height:75px;
+    }
+    .meal_and_plus{
+        white-space: none;
+        text-align: left;
     }
     .price{
-        font-size: 17px;
+        right: 10px;
     }
 }
-@media screen and (min-width:451px) and (max-width:600px){
+@media screen and (max-width:380px){
+
+    #desktop_name{
+        display: none;
+    }
     h2{
-        font-size: 35px;
+        font-size: 23px;
+    }
+    .visible_heart{
+        top: 14px;
+    }
+    .invisible_heart{
+        top: 29px;
+    }
+    
+    .meal_and_plus{
+        margin: 10px 10px;
+    }
+    .meal{
+        font-size: 16px;
+    }
+    .plus{
+        font-size: 13px;
+    }
+    .price{
+        font-size: 13px;
+        top: 45px;
+    }
+    .footer{
+        font-size: 18px;
+    }
+    .footer i{
+        font-size: 15px;
+    }
+}
+@media screen and (min-width:381px) and (max-width:600px){
+   #desktop_name{
+       display: none;
+   }
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 29px;
     }
     .btn{
-        font-size: 32px;
+        font-size: 25px;
     }
 }
 @media screen and (min-width:601px) and (max-width:1024px){
+
+    #desktop_name{
+        display: none;
+    }
+    .name_and_heart_btn{
+        justify-content: center;
+
+    }
+    .visible_heart{
+        margin-right: 10px;
+    }
+    .invisible_heart{
+        margin-right: 10px;
+    }
 
     h1{
         font-size:40px;
@@ -421,22 +489,45 @@ button{
             font-size: 25px;
             margin-right: 25px;
         }
+        
 
     }
-   @media screen and (min-width:1025px) and (max-width:1920px){
-
-    .name_and_heart_btn{
-        width:400px ;
-        margin: 0;
-        height: auto;
+   @media screen and (min-width:1025px)  {
+    #desktop_name{
         justify-content: center;
-        align-items: center;
     }
+    .btn{
+        top:40px
+    }
+    header a,h2{
+        font-size: 40px;
+    }
+    h1{
+        font-size: 50px;
+    }
+    
+    h3{
+        font-size: 30px;
+    }
+    section{
+        bottom: 0;
+    }
+    .name_and_heart_btn{
+        display: none;
+      }
     section{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-
+        justify-content: space-around;
+      }
+      article{
+          
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+      }
+    .choice_btn{
+        width: 95%;
     }
     .btn{
         position: relative;
@@ -444,6 +535,14 @@ button{
         margin-left: 30px;
         font-size: 30px;
 
+    }
+    .plus{
+
+        font-size: 14px;
+    }
+    .price{
+        font-size: 15px;
+        top: 40px;
     }
     .visible_heart{
         position: relative;
@@ -456,18 +555,9 @@ button{
         left: 4px;
         top: 9px;
     }
-    article{
-        width: 30%;
-    }
+ 
     .order{
-        position: absolute;
-        left: 45%;
-        top: 87%;
-    }
-    img{
-        width: 50%;
-        margin-left: 25%;
-    }
+        margin: 50px 0;
    }
 }
 
