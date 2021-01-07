@@ -35,26 +35,21 @@ section{
 
 /*flex box*/
 
-header,article,#desktop_name,.name_and_heart_btn,.choice_btn,.meal_and_plus,.plus,.order,.valid,footer,.footer,.foot{
+header,article,#desktop_name,.name_and_heart_btn,.choice_btn,.order,.valid,footer,.footer,.foot{
     display: flex;
 }
 header,#desktop_name,.name_and_heart_btn,.choice_btn,.plus,.order,.footer{
     flex-direction: row;
 
 }
-article,.meal_and_plus,.valid,footer,.foot{
+article,.valid,footer,.foot{
     flex-direction: column;
 }
 
 .choice_btn,#desktop_name,.name_and_heart_btn{
     justify-content: space-between;
 }
-.meal,.plus{
-    justify-content:flex-start;
-}
-.meal_and_plus{
-    align-items: baseline;
-}
+
 header,.order,.valid{
     justify-content: center;
     align-items: center;
@@ -88,7 +83,7 @@ span{
 .meal{
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
-    font-size: 19px;
+    font-size: 17px;
 }
 .plus{
     font-family: 'Roboto', sans-serif;
@@ -170,8 +165,7 @@ button{
         
     }
  .choice_btn{
-    height:70px;
-    width:auto;
+     height: 65px;
     background-color: rgb(241, 241, 241);
     margin: 8px ;
     box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.199);
@@ -180,6 +174,7 @@ button{
     cursor: pointer;
     outline: none;
     visibility: hidden;
+  
     
     }
 
@@ -191,24 +186,28 @@ button{
 
  .meal_and_plus{
      width:100%;
-    margin: 10px 15px;
-    overflow: hidden;
-    white-space: nowrap; 
-    text-overflow:ellipsis;
+     margin: 10px 15px;
+     white-space: nowrap;
+     overflow: hidden;
+     text-align: left;
 }
 
- 
-  .meal{
-    width: auto;
-    height: auto;
-    margin: 3px;
-    }
+ /* text-box*/
 
- .plus{
-     width: auto;
-     height: auto;
-     margin: 3px 0;
-     }
+ .text-overflow{
+     width: 100%;
+    text-align: left;
+    text-overflow: ellipsis;
+     
+ }
+  .meal,.plus{
+   
+    margin: 3px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+ }
+
+ 
 
 .price{
     display: block;
@@ -221,6 +220,7 @@ button{
 
  .valid {
     position: relative;
+    display: none;
     left:50px ;
     width:0px;
     height: 100%;
@@ -229,10 +229,41 @@ button{
     padding: none;
     color: white;
     }
+    .valid .fa-check-circle{
+        position: relative;
+        top: 15px;
+    }
 
  .choice_btn:focus .valid{
+     display:block;
    -webkit-animation: valid 1s ease  forwards;
  }
+ @keyframes valid{
+    0%{
+        width: 0%;
+        left: 100px;
+        
+   }
+   100%{
+       width: 25%;
+       left: 0;
+   }
+   }
+   @keyframes rotation{
+   
+       0%{
+           transform: rotate(0deg);
+       }
+       25%{
+           transform: rotate(360deg);
+   
+       }
+       50%{
+           
+           transform: scale(1.5);
+       }
+       
+   }
 .order{
     width: auto;
     margin-bottom: 100px;
@@ -344,52 +375,34 @@ button{
     }
 }
 
- @keyframes valid{
- 0%{
-     width: 0%;
-     left: 100px;
-     
-}
-100%{
-    width: 30%;
-    left: 0;
-}
-}
-@keyframes rotation{
 
-    0%{
-        transform: rotate(0deg);
-    }
-    25%{
-        transform: rotate(360deg);
-
-    }
-    50%{
-        
-        transform: scale(1.5);
-    }
-    
-}
 
 @media screen and (min-width:320px) and (max-width:340px){
     #desktop_name{
         display: none;
     }
-    .choice_btn{
-        height:75px;
-    }
-    .meal_and_plus{
-        white-space: none;
-        text-align: left;
-    }
+   
     .price{
-        right: 2px;
+        right: 10px;
+        font-size: 15px;
+    }
+    .meal{
+        font-size:14px ;
     }
     .plus{
-        font-size: 12px;
+        font-size: 11px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .visible_heart{
+        top:5px;
+    }
+    .invisible_heart{
+        top: 20px;
     }
 }
-@media screen  and (max-width:380px){
+@media screen and (min-width:341px) and (max-width:380px){
 
     #desktop_name{
         display: none;
@@ -414,8 +427,9 @@ button{
         font-size: 13px;
     }
     .price{
-        font-size: 13px;
+        font-size: 15px;
         top: 45px;
+        right: 10px;
     }
     .footer{
         font-size: 18px;
@@ -442,7 +456,7 @@ button{
     }
     .price{
         font-size: 15px;
-        top: 40px;
+        top: 35px;
         right: 10px;
     }
 }
@@ -469,16 +483,16 @@ button{
         font-size: 30px;
         }
         h2{
-            font-size: 50px;
+            font-size: 35px;
         }
         .btn{
-            font-size: 40px;
+            font-size: 33px;
         }
         .visible_heart{
-            top:40px;
+            top:20px;
         }
         .invisible_heart{
-            top: 54px;
+            top: 35px;
         }
         h3{
             font-size: 30px;

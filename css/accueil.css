@@ -460,13 +460,14 @@ figcaption
     -webkit-text-fill-color: transparent;
    -webkit-transform: scale(0);
     transition: transform 0.5s linear 0s ;
+    -webkit-transform-origin: center;
     
 }
 
 .btn:focus .invisible_heart{
     display: block;
-    z-index: 1;
     -webkit-transform: scale(1);
+    
    
     
 }
@@ -733,9 +734,14 @@ h1,h3
         width: 100%;
         height: 75%;
      }
-     .name{
-         font-size: 25;
+     figcaption{
+         padding: none;
      }
+     .name{
+
+         margin-bottom: 10px;
+     }
+     
      .place{
          font-size: 17px;
      }
