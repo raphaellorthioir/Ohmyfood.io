@@ -125,10 +125,10 @@ header,.valid,.order{
             outline: none;
             overflow: hidden;
             border: none;
-             }
+       }
 
         /* like btn*/
-        .btn{
+            .btn{
             width: auto;
             height: 50px;
             background:rgb(233,232,232);
@@ -147,12 +147,13 @@ header,.valid,.order{
                 opacity: 1;
                 margin-top: 15px;
                 }
-            .btn:focus .invisible_heart{
+             .btn:focus .invisible_heart{
                 display: block;
+                -webkit-transform: scale(1);
+                -ms-transform: scale(1);
                 transform: scale(1);
-                }
-
-            .invisible_heart{
+                    }
+             .invisible_heart{
                 position: absolute;
                 top: 33px;
                 right: 7%;
@@ -161,33 +162,17 @@ header,.valid,.order{
                 background:-webkit-linear-gradient(90deg, #ff79da, #9356dc);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+                -webkit-transform: scale(0);
+                -ms-transform: scale(0);
                 transform: scale(0);
+                -webkit-transition: -webkit-transform 0.5s linear 0s;
+                transition: -webkit-transform 0.5s linear 0s;
+                -o-transition: transform 0.5s linear 0s ;
                 transition: transform 0.5s linear 0s ;
+                transition: transform 0.5s linear 0s, -webkit-transform 0.5s linear 0s;
+        }
 
-                /*Safari/IOS*/
-                -webkit-transition-property:transform;
-                -webkit-transition-duration: 0.5s;
-                -webkit-transition-delay: 0s;
-                -webkit-transition-timing-function:linear ;
-               }
-
-                /* Safari/IOS*/
-
-                @supports(transition: initial){
-
-                    .invisible_heart{
-                        transition: transform 0.5 linear 0s;
-                    }
-                }
-                @supports(transition: initial){
-                    .btn:focus .invisible_heart{
-                        display:block;
-                        transform: scale(1);
-                    }
-                }
-                 /*-Safari/IOS-*/
-
-        /*-like btn-*/
+         /*-like btn-*/
         
         /*choice btn*/
 
@@ -210,49 +195,77 @@ header,.valid,.order{
             }
 
             /*btn appearance*/
-
-                .vision1{
-                    animation-name: vision;
-                    animation-duration: 0.5s;
-                    animation-delay: 300ms;
-                    animation-timing-function: linear;
-                    animation-fill-mode: forwards;
-                    position: relative;
-                }
-                
-                .vision2{
-                    animation-name:vision;
-                    animation-duration: 0.5s;
-                    animation-delay: 400ms;
-                    animation-timing-function: ease;
-                    animation-fill-mode: forwards;
-                    position: relative;
-                }
-                
-                .vision3{
-                    animation-name: vision;
-                    animation-duration: 0.5s;
-                    animation-delay: 500ms ;
-                    animation-timing-function:ease;
-                    animation-fill-mode: forwards;
-                    position: relative;
-                }
-                
-                @keyframes vision {
-                    0%{
-                        opacity: 0;
-                        bottom: 0px;
-                        
-                    }
-                    
-                    100%{
-                        opacity: 1;
-                        bottom:2px ;
-                        visibility: visible;
-                        
-                    }
-                }
+            .vision1{
+                -webkit-animation-name: vision;
+                        animation-name: vision;
+                -webkit-animation-duration: 0.5s;
+                        animation-duration: 0.5s;
+                -webkit-animation-delay: 300ms;
+                        animation-delay: 300ms;
+                -webkit-animation-timing-function: linear;
+                        animation-timing-function: linear;
+                -webkit-animation-fill-mode: forwards;
+                        animation-fill-mode: forwards;
+                position: relative;
+            }
             
+            .vision2{
+                -webkit-animation-name:vision;
+                        animation-name:vision;
+                -webkit-animation-duration: 0.5s;
+                        animation-duration: 0.5s;
+                -webkit-animation-delay: 400ms;
+                        animation-delay: 400ms;
+                -webkit-animation-timing-function: ease;
+                        animation-timing-function: ease;
+                -webkit-animation-fill-mode: forwards;
+                        animation-fill-mode: forwards;
+                position: relative;
+            }
+            
+            .vision3{
+                -webkit-animation-name: vision;
+                        animation-name: vision;
+                -webkit-animation-duration: 0.5s;
+                        animation-duration: 0.5s;
+                -webkit-animation-delay: 500ms ;
+                        animation-delay: 500ms ;
+                -webkit-animation-timing-function:ease;
+                        animation-timing-function:ease;
+                -webkit-animation-fill-mode: forwards;
+                        animation-fill-mode: forwards;
+                position: relative;
+            }
+                  
+            @-webkit-keyframes vision {
+                0%{
+                    opacity: 0;
+                    bottom: 0px;
+                    
+                }
+                
+                100%{
+                    opacity: 1;
+                    bottom:2px ;
+                    visibility: visible;
+                    
+                }
+            }
+            @keyframes vision {
+                0%{
+                    opacity: 0;
+                    bottom: 0px;
+                    
+                }
+                
+                100%{
+                    opacity: 1;
+                    bottom:2px ;
+                    visibility: visible;
+                    
+                }
+            }
+        
             /*-btn appearnce-*/
 
         /*-choice btn-*/
@@ -266,99 +279,80 @@ header,.valid,.order{
                 height: 100%;
                 background-color:#99E2D0 ;
                 font-size: 30px;
-                padding: none;
+                padding: 0;
                 color: white;
                
             }
             .choice_btn:focus .valid{
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                animation: valid 1s normal  forwards  ease;
+                -webkit-animation: valid 1s normal  forwards  ease;
+                        animation: valid 1s normal  forwards  ease;
                 
             }
            
                 
-                .choice_btn:focus .fa-check-circle{
-                    animation: rotation 2s normal forwards 0.3s  ease;
-               
-                 }
+            .choice_btn:focus .fa-check-circle{
+                -webkit-animation: rotation 2s normal forwards 0.3s  ease;
+                        animation: rotation 2s normal forwards 0.3s  ease;
+           
+             }
                 
             /*validation animation*/
 
-              @keyframes valid{
-                  0%{
-                      right: -25%;
-                  }
-                  100%{
-                      right: 0;
-                  }
-              }
-            
-
-                @keyframes rotation {
-            
-                0%{
-                    transform: rotate(0deg);
-                }
-                25%{
-                    transform: rotate(360deg);
-                }
-                50%{
-                    transform: scale(1.5);
-                }
-                }
-                            
-                   
-
-                 /*Safari/IOS*/
-                /* -webkit-animation-name: valid;
-                 -webkit-animation-duration: 1s;
-                 -webkit-animation-direction: normal;
-                 -webkit-animation-fill-mode: forwards;
-                 -webkit-animation-delay: 0;
-                 -webkit-animation-iteration-count:0 ;
-                 -webkit-animation-timing-function: ease; */
-                    
-                  
-                      /*Safari/IOS*/
-                   /* -webkit-animation-name: rotation;
-                    -webkit-animation-duration: 2s;
-                    -webkit-animation-direction:normal;
-                    -webkit-animation-fill-mode: forwards;
-                    -webkit-animation-delay: 0.3s;
-                    -webkit-animation-iteration-count: 0;
-                    -webkit-animation-timing-function: ease;*/
-                    /*Safari/IOS-supports*/
-
-                    @supports (-webkit-animation: valid 1s ease 0s forwards ease){
-
-                           .choice_btn:focus .valid{
-                           animation-name: valid;
-                           animation-duration: 1s;
-                           animation-direction: normal;
-                           animation-fill-mode: forwards;
-                           animation-delay: 0;
-                           animation-iteration-count: 0;
-                           animation-timing-function: ease;
-                           }
+                 /*keyframes*/
+                    @-webkit-keyframes valid{
+                        0%{
+                            right: -25%;
                         }
-                   @supports (-webkit-animation){
-
-                    .choice_btn:focus .fa-check-circle{
-                        animation-name: rotation;
-                        animation-duration: 2s;
-                        animation-direction: normal;
-                        animation-fill-mode: forwards;
-                        animation-delay: 0.3s;
-                        animation-iteration-count: 0;
-                        animation-timing-function: ease;
-                     }
+                        100%{
+                            right: 0;
+                        }
                     }
 
-                     /*-Safari/IOS-supports-*/
-
-                    /*keyframes*/
-
-                     /*-keyframes-*/
+                    @keyframes valid{
+                        0%{
+                            right: -25%;
+                        }
+                        100%{
+                            right: 0;
+                        }
+                    }
+                
+                    @-webkit-keyframes rotation {
+                                
+                        0%{
+                            -webkit-transform: rotate(0deg);
+                                    transform: rotate(0deg);
+                        }
+                        25%{
+                            -webkit-transform: rotate(360deg);
+                                    transform: rotate(360deg);
+                        }
+                        50%{
+                            -webkit-transform: scale(1.5);
+                                    transform: scale(1.5);
+                        }
+                        }
+                                
+                    @keyframes rotation {
+                                
+                        0%{
+                            -webkit-transform: rotate(0deg);
+                                    transform: rotate(0deg);
+                        }
+                        25%{
+                            -webkit-transform: rotate(360deg);
+                                    transform: rotate(360deg);
+                        }
+                        50%{
+                            -webkit-transform: scale(1.5);
+                                    transform: scale(1.5);
+                        }
+                     }
+                                    
+                /*-keyframes-*/
 
             /*-validation-animation-*/
         
@@ -449,7 +443,7 @@ footer h3{
 .footer{
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 .footer i{
        width: 15px;
@@ -460,12 +454,11 @@ footer h3{
  footer a{
      text-decoration: none;
      color: white;
-     margin-top: 10px;
     }
 
 
 
-
+    /*Media queries*/
 
 
 
@@ -493,6 +486,13 @@ footer h3{
     }
     .invisible_heart{
         top: 20px;
+    }
+    .footer{
+        margin-bottom: 5px;
+    }
+     .foot a{
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }
 @media screen and (min-width:341px) and (max-width:380px){
