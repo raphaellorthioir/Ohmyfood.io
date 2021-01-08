@@ -9,7 +9,7 @@ body
     
 }
 
-/*No scroll duyring spinner*/
+/*No scroll during spinner*/
 
 @keyframes overflow{
     0%{
@@ -107,6 +107,9 @@ h1,#text_description,#title_description,#explore
     -webkit-animation: spinner 3s ease normal forwards;
     
 }
+
+/* Webkit Safari/IOS*/
+
 
 
 @keyframes spinner{
@@ -216,7 +219,6 @@ h1,#text_description,#title_description,#explore
 {
     height: 65px;
     width: 320px;
-    padding-left: 7%;
     background-color: rgb(241, 241, 241);
     box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.25);
     border-radius:25px 25px;
@@ -229,7 +231,7 @@ h1,#text_description,#title_description,#explore
     width:15px;
     font-size: 20px;
     margin-right: 25px;
-    margin-left: 10px;
+    margin-left: 30px;
     color: rgba(0, 0, 0, 0.5);
     transition: color linear 200ms;
 }
@@ -458,18 +460,32 @@ figcaption
     background:-webkit-linear-gradient(90deg, #ff79da, #9356dc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-   -webkit-transform: scale(0);
+    -webkit-transform: scale(0);
     transition: transform 0.5s linear 0s ;
-    -webkit-transform-origin: center;
-    
+    /*Safari/IOS*/
+    -webkit-transition-property:transform;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-delay: 0s;
+    -webkit-transition-timing-function:linear ;
 }
+/* Safari/IOS*/
+@supports(transition: initial){
+
+    .invisible_heart{
+        transition: transform 0.5 linear 0s;
+    }
+}
+@supports(transition: initial){
+    .btn:focus .invisible_heart{
+        display:block;
+        transform: scale(1);
+    }
+}
+/*--*/
 
 .btn:focus .invisible_heart{
     display: block;
-    -webkit-transform: scale(1);
-    
-   
-    
+    transform: scale(1);
 }
 
 /*Footer*/
@@ -558,7 +574,9 @@ h1,h3
 
         margin-right: 15px;
      }
-    
+    .number{
+        width: 30px;
+    }
     .step{
 
         justify-content: center;
@@ -666,7 +684,7 @@ h1,h3
         font-size: 30px;
     }
   }
-@media screen and (min-width:1024px) 
+@media screen and (min-width:1024px) and (max-width:1500px)
 {
     h1{
         font-size: 50px;
@@ -739,7 +757,7 @@ h1,h3
      }
      .name{
 
-         margin-bottom: 10px;
+         margin-bottom: 15px;
      }
      
      .place{
@@ -771,3 +789,109 @@ h1,h3
      }
 }
     
+@media screen and (min-width:1501px){
+
+    
+        h1{
+            font-size: 50px;
+        }
+        #gps
+        {
+            font-size: 30px;
+        }
+        #gps i{
+            font-size: 30px;
+    
+        }
+        .desktop_screen_flex_row{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: auto;
+            height: auto;
+        }
+        #desktop_screen_flex_column_left{
+            
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            width: 35% ;
+        }
+        #description{
+            background-color: white;
+        }
+        #fonction{
+            padding-right: 15px;
+    
+        }
+         .title{
+             margin: none;
+             margin-left: 50px;
+         }   
+         .background_step{
+             width: 300px;
+         }
+        .step{
+            justify-content: center;
+        }
+        .desktop_screen_flex_column{
+    
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+    
+         #restaurants{
+             display: flex;
+            flex-direction: column;
+            width:100%;
+            padding-bottom: 30px;
+            padding-top: 0;
+        } 
+        
+        figure{
+            width: 40%;
+            height:auto;
+        }
+         figure img{
+    
+            width: 100%;
+            height: 75%;
+         }
+         figcaption{
+             padding: none;
+         }
+         .name{
+            font-size:25px;
+             margin-bottom: 20px;
+         }
+         
+         .place{
+             font-size: 20px;
+             
+         }
+         .btn{
+             font-size: 25px;
+         }
+         .new{
+             width: 125px;
+             height: 30px;
+             font-size: 20px;
+         }
+         h2{
+             font-size: 35px;
+         }
+         .footer i{
+             font-size: 20px;
+             margin-right: 25px;
+         }
+         .footer{
+             font-size: 20px;
+         }
+         .rights{
+             font-size: 20px;
+         }
+         footer a{
+             font-size: 20px;
+         }
+}
