@@ -74,14 +74,14 @@ h2{
 
 /*flex box*/
 
-header,article,#desktop_name,.name_and_heart_btn,.choice_btn,.order,footer,.footer,.foot{
+header,article,#desktop_name,.name_and_heart_btn,.meal_and_plus,.choice_btn,.valid,.order,footer,.footer,.foot{
     display: flex;
 }
 header,#desktop_name,.name_and_heart_btn,.choice_btn,.plus,.order,.footer{
     flex-direction: row;
 
 }
-article,footer,.foot{
+article,footer,.foot,.valid,.meal_and_plus{
     flex-direction: column;
 }
 
@@ -89,7 +89,7 @@ article,footer,.foot{
     justify-content: space-between;
 }
 
-header,.order{
+header,.valid,.order{
     justify-content: center;
     align-items: center;
 }
@@ -258,45 +258,67 @@ header,.order{
         /*-choice btn-*/
 
         /*Validation of order*/
-
-            .valid {
+            .valid{
                 position: relative;
                 display: none;
-                left:50px ;
-                width:0px;
+                width: 25%;
+                right:-25%;
                 height: 100%;
-                font-size: 30px;
                 background-color:#99E2D0 ;
+                font-size: 30px;
                 padding: none;
                 color: white;
+               
+            }
+            .choice_btn:focus .valid{
+                display: flex;
+                animation: valid 1s normal  forwards  ease;
                 
-                }
-                .valid .fa-check-circle{
-                    position: relative;
-                    top: 15px;
-                }
-
-
+            }
+           
+                
+                .choice_btn:focus .fa-check-circle{
+                    animation: rotation 2s normal forwards 0.3s  ease;
+               
+                 }
+                
             /*validation animation*/
 
-                .choice_btn:focus .valid {
-                    display:block;
-                    animation: valid 1s normal forwards 0 ease;
-                 }
-                            
-                    /*Safari/IOS*/
-                  /*  -webkit-animation-name: valid;
-                    -webkit-animation-duration: 1s;
-                    -webkit-animation-direction: normal;
-                    -webkit-animation-fill-mode: forwards;
-                    -webkit-animation-delay: 0;
-                    -webkit-animation-iteration-count:0 ;
-                    -webkit-animation-timing-function: ease; */
+              @keyframes valid{
+                  0%{
+                      right: -25%;
+                  }
+                  100%{
+                      right: 0;
+                  }
+              }
+            
 
-                    .choice_btn:focus .fa-check-circle{
-                    animation: rotation 2s normal forwards 0.3s 0 ease;
+                @keyframes rotation {
+            
+                0%{
+                    transform: rotate(0deg);
+                }
+                25%{
+                    transform: rotate(360deg);
+                }
+                50%{
+                    transform: scale(1.5);
+                }
+                }
+                            
+                   
+
+                 /*Safari/IOS*/
+                /* -webkit-animation-name: valid;
+                 -webkit-animation-duration: 1s;
+                 -webkit-animation-direction: normal;
+                 -webkit-animation-fill-mode: forwards;
+                 -webkit-animation-delay: 0;
+                 -webkit-animation-iteration-count:0 ;
+                 -webkit-animation-timing-function: ease; */
+                    
                   
-                    }
                       /*Safari/IOS*/
                    /* -webkit-animation-name: rotation;
                     -webkit-animation-duration: 2s;
@@ -307,58 +329,35 @@ header,.order{
                     -webkit-animation-timing-function: ease;*/
                     /*Safari/IOS-supports*/
 
-                   /* @supports (-webkit-animation: valid 1s ease 0s forwards ease){
+                    @supports (-webkit-animation: valid 1s ease 0s forwards ease){
 
                            .choice_btn:focus .valid{
-                           -webkit-animation-name: valid;
-                           -webkit-animation-duration: 1s;
-                           -webkit-animation-direction: normal;
-                           -webkit-animation-fill-mode: forwards;
-                           -webkit-animation-delay: 0;
-                           -webkit-animation-iteration-count: 0;
-                           -webkit-animation-timing-function: ease;
+                           animation-name: valid;
+                           animation-duration: 1s;
+                           animation-direction: normal;
+                           animation-fill-mode: forwards;
+                           animation-delay: 0;
+                           animation-iteration-count: 0;
+                           animation-timing-function: ease;
                            }
-                        }*/
-                   /*@supports (-webkit-animation: rotation 2s ease 0.3s forwards){
+                        }
+                   @supports (-webkit-animation){
 
                     .choice_btn:focus .fa-check-circle{
-                        -webkit-animation-name: rotation;
-                        -webkit-animation-duration: 2s;
-                        -webkit-animation-direction: normal;
-                        -webkit-animation-fill-mode: forwards;
-                        -webkit-animation-delay: 0.3s;
-                        -webkit-animation-iteration-count: 0;
-                        -webkit-animation-timing-function: ease;
+                        animation-name: rotation;
+                        animation-duration: 2s;
+                        animation-direction: normal;
+                        animation-fill-mode: forwards;
+                        animation-delay: 0.3s;
+                        animation-iteration-count: 0;
+                        animation-timing-function: ease;
                      }
-                    }*/
+                    }
 
                      /*-Safari/IOS-supports-*/
 
                     /*keyframes*/
 
-                    @keyframes valid {
-                        0%{
-                            width: 0%;
-                            left: 100px;
-                            }
-                        100%{
-                            width: 25%;
-                            left: 0;
-                        }
-                    }
-
-                    @keyframes rotation {
-                
-                    0%{
-                        transform: rotate(0deg);
-                    }
-                    25%{
-                        transform: rotate(360deg);
-                    }
-                    50%{
-                        transform: scale(1.5);
-                    }
-                    }
                      /*-keyframes-*/
 
             /*-validation-animation-*/
@@ -374,9 +373,7 @@ header,.order{
         font-size:16px ;
         font-weight: 500;
     }    
-    .price{
-        font-size: 20px;
-        }
+    
     .meal_and_plus{    /*text-block*/ 
         width:100%;
         margin: 10px 15px;
@@ -397,7 +394,8 @@ header,.order{
         width:auto;
         height: auto;
         top: 35px;
-        right: 20px;
+        right: 10px;
+        font-size: 20px;
         }
     /*-meal and plus size and overflow-*/
 
