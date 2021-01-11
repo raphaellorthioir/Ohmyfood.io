@@ -548,6 +548,9 @@ figcaption{
         -ms-transform: scale(1);
             transform: scale(1);
 }
+#desktop_screen_flex_column_left{
+    width: 100%;
+}
 
 /*Footer*/
 
@@ -585,7 +588,10 @@ figcaption{
 
 
 @media screen and (min-width:320px) and (max-width:600px){
-
+    
+    #gps i,#location{
+        font-size: 25px;
+    }
 
     .background_step{
 
@@ -617,7 +623,10 @@ figcaption{
 }
 
 @media screen and (min-width:601px) and (max-width:1023px){
-    
+
+    .desktop_screen_flex_column_left{
+        width: 100%;
+    }
     .desktop_screen_flex_row{
         display: flex;
         flex-direction: column;
@@ -660,12 +669,13 @@ figcaption{
     .background_step{
             height: 90px;
             width: 500px;
-            padding-left: 40px;
+            padding-left: 30px;
     }
     .number{
         width: 35px;
         height: 35px;
         top:0;
+        font-size: 20px;
     }
     .background_step i {
         font-size: 30px;
@@ -754,7 +764,7 @@ figcaption{
         flex-direction: column;
         width:100%;
         padding-bottom: 30px;
-        padding-top: 0;
+        padding-top: 30px;
     } 
     
     figure{
@@ -854,7 +864,7 @@ figcaption{
             flex-direction: column;
             width:100%;
             padding-bottom: 30px;
-            padding-top: 0;
+            padding-top: 30px;
         } 
         
         figure{
@@ -866,7 +876,7 @@ figcaption{
             height: 75%;
          }
          figcaption{
-             padding: 0;
+             padding: 10px;
          }
          .name{
             font-size:25px;
@@ -874,10 +884,10 @@ figcaption{
          }
          
          .place{
-             font-size: 20px;
+             font-size: 25px;
          }
          .btn{
-             font-size: 25px;
+             font-size: 30px;
          }
          .new{
              width: 125px;
