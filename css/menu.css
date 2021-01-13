@@ -153,6 +153,11 @@ header,.valid,.order{
                 -ms-transform: scale(1);
                 transform: scale(1);
                     }
+                
+             .btn:hover .invisible_heart{  /*For Safari*/
+                 display: block;
+                 -webkit-transform: scale(1);  
+             }
              .invisible_heart{
                 position: absolute;
                 top: 33px;
