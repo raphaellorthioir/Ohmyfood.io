@@ -123,37 +123,35 @@ section,.align,.name_and_place,footer,.foot{
 
   /*opacity on page during the spinner*/
 
-  .screen_load
+ .screen_load
   {   
      visibility: hidden;
-     opacity: 0;
-     animation: load_page 1s ease normal forwards 3s;
+     animation: load_page 1s ease 3s normal forwards ;
  }
   
   @-webkit-keyframes load_page{
      0%{
          
          visibility: hidden;
-         opacity: 0;
+        
      }
      100%{
         
          visibility: visible;
-         opacity: 1;
-     }
+       
  }
- 
+}
  
  @keyframes load_page{
      0%{
          
          visibility: hidden;
-         opacity: 0;
+        
      }
      100%{
         
          visibility: visible;
-         opacity: 1;
+         
      }
  }
  /*HEADER*/
@@ -225,7 +223,6 @@ section,.align,.name_and_place,footer,.foot{
 
 .spinner{
     display: block;
-    visibility: visible;
     margin: auto;
     bottom: 0;
     left: 0;
@@ -250,47 +247,31 @@ section,.align,.name_and_place,footer,.foot{
 
 @-webkit-keyframes spinner{
 
-    0% { visibility: visible;
+    0% { 
          color: #99E2D0 ;
         -webkit-transform: origin 0;
                 transform: origin 0;
         -webkit-transform: rotate(360deg);
                 transform: rotate(360deg);
-        opacity: 1;
-        font-size:100px ;
     }
     
-    95% {
-         opacity: 1;
-         }
-
     100% {
-        visibility: hidden;
         color:#9356DC;
-        opacity: 0;
         display: none;
          }
     }
 @keyframes spinner{
 
-    0% { visibility: visible;
+    0% {
             color: #99E2D0 ;
         -webkit-transform: origin 0;
                 transform-origin: origin 0;
         -webkit-transform: rotate(360deg);
                 transform: rotate(360deg);
-        opacity: 1;
-        font-size:100px ;
     }
 
-    95% {
-            opacity: 1;
-            }
-
     100% {
-        visibility: hidden;
         color:#9356DC;
-        opacity: 0;
         display: none;
             }
 }
@@ -394,8 +375,8 @@ section,.align,.name_and_place,footer,.foot{
    height: 65px;
    width: 320px;
    background-color: rgb(241, 241, 241);
-   -webkit-box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.25);
-           box-shadow: 2px 1px 20px rgba(0, 0, 0, 0.25);
+   -webkit-box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.25);
+           box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.25);
    border-radius:25px 25px;
    cursor: pointer;
 }
