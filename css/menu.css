@@ -289,9 +289,9 @@ header,.valid,.order{
                
             }
             .choice_btn:focus .valid{
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
+               /*display: -webkit-box;
+                display: -ms-flexbox;*/
+                display: block;
                 -webkit-animation: valid 1s normal  forwards  ease;
                         animation: valid 1s normal  forwards  ease;
                 
@@ -396,6 +396,18 @@ header,.valid,.order{
         right: 10px;
         font-size: 20px;
         }
+        .choice_btn:focus .price{
+            animation: left-drift 1s linear normal forwards;
+        }
+
+        @keyframes left-drift{
+            0%{
+                right: 0;
+            }
+            100%{
+                right: 20px;
+            }
+        }
     /*-meal and plus size and overflow-*/
 
 /*-Article-*/
@@ -477,15 +489,7 @@ footer h3{
         right: 10px;
         font-size: 15px;
     }
-    .meal{
-        font-size:14px ;
-    }
-    .plus{
-        font-size: 11px;
-    }
-    h2{
-        font-size: 20px;
-    }
+
     .visible_heart{
         top:5px;
     }
@@ -518,12 +522,7 @@ footer h3{
     .meal_and_plus{
         margin: 10px 10px;
     }
-    .meal{
-        font-size: 16px;
-    }
-    .plus{
-        font-size: 13px;
-    }
+  
     .price{
         font-size: 15px;
         top: 45px;
@@ -549,9 +548,7 @@ footer h3{
     .btn{
         font-size: 25px;
     }
-    .plus{
-        font-size: 15px;
-    }
+ 
     .price{
         font-size: 15px;
         top: 35px;
