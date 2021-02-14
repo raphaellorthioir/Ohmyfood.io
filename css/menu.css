@@ -120,11 +120,12 @@ header,.valid,.order{
             
         /*general*/
 
-        button {
+        .button {
             background-color: white;
             outline: none;
             overflow: hidden;
-            border: none;
+}
+        
        }
 
         /* like btn*/
@@ -191,6 +192,7 @@ header,.valid,.order{
                 cursor: pointer;
                 outline: none;
                 visibility: hidden;
+               
             }
 
 
@@ -288,17 +290,18 @@ header,.valid,.order{
                 color: white;
                
             }
-            .choice_btn:focus .valid{
-               /*display: -webkit-box;
-                display: -ms-flexbox;*/
-                display: block;
+           .choice_btn:focus .valid{
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
                 -webkit-animation: valid 1s normal  forwards  ease;
                         animation: valid 1s normal  forwards  ease;
+                
                 
             }
            
                 
-            .choice_btn:focus .fa-check-circle{
+             .choice_btn:focus .fa-check-circle{
                 -webkit-animation: rotation 2s normal forwards 0.3s  ease;
                         animation: rotation 2s normal forwards 0.3s  ease;
            
@@ -317,7 +320,7 @@ header,.valid,.order{
                     }
 
                     @keyframes valid{
-                        0%{
+                        0%{ 
                             right: -25%;
                         }
                         100%{
@@ -660,7 +663,8 @@ footer h3{
 
     }
     .meal_and_plus{
-        margin: 10px 10px;
+        margin: 0px 10px;
+        margin-top: 10px;
     }
     .plus{
 
@@ -675,7 +679,8 @@ footer h3{
         position: relative;
         bottom: 8px;
         right: 0;
-        top: 0;
+        top: 7px;
+        left: 4px;
         margin: 0;
     }
     .invisible_heart{
