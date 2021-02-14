@@ -290,20 +290,20 @@ header,.valid,.order{
                 color: white;
                
             }
-           .choice_btn:focus .valid{
+           .choice_btn:hover .valid{
                 display: -webkit-box;
                 display: -ms-flexbox;
                 display: flex;
                 -webkit-animation: valid 1s normal  forwards  ease;
-                        animation: valid 1s normal  forwards  ease;
+                        animation: valid 1s normal  forwards  ease 300ms;
                 
                 
             }
            
                 
-             .choice_btn:focus .fa-check-circle{
-                -webkit-animation: rotation 2s normal forwards 0.3s  ease;
-                        animation: rotation 2s normal forwards 0.3s  ease;
+             .choice_btn:hover .fa-check-circle{
+                -webkit-animation: rotation 2s normal forwards 1s  ease;
+                        animation: rotation 2s normal forwards 1s  ease;
            
              }
                 
@@ -399,8 +399,8 @@ header,.valid,.order{
         right: 10px;
         font-size: 20px;
         }
-        .choice_btn:focus .price{
-            animation: left-drift 1s linear normal forwards;
+        .choice_btn:hover .price{
+            animation: left-drift 2s linear normal forwards ;
         }
 
         @keyframes left-drift{
@@ -487,6 +487,9 @@ footer h3{
     #desktop_name{
         display: none;
     }
+    .btn{
+        -webkit-text-stroke: 1px black;
+    }
    
     .price{
         right: 10px;
@@ -511,6 +514,9 @@ footer h3{
 
     #desktop_name{
         display: none;
+    }
+    .btn{
+        -webkit-text-stroke: 1px black;
     }
     h2{
         font-size: 23px;
@@ -550,6 +556,7 @@ footer h3{
     }
     .btn{
         font-size: 25px;
+        -webkit-text-stroke: 1px black;
     }
  
     .price{
@@ -585,6 +592,7 @@ footer h3{
         }
         .btn{
             font-size: 33px;
+            -webkit-text-stroke: 1px black;
         }
         .visible_heart{
             top:20px;
@@ -620,7 +628,10 @@ footer h3{
         justify-content: center;
     }
     .btn{
-        top:40px
+        top:40px;
+        right: 0;
+        -webkit-text-stroke: 1px black;
+        background: none;
     }
     header a,h2{
         font-size: 40px;
