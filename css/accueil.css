@@ -54,6 +54,13 @@ h1,#text_description,#title_description,#explore{
 
 /* Flex box*/
 
+/* button*/
+
+.button {
+    background-color: white;
+    outline: none;
+    
+}
 
 
 #description,#gps,#localisation,.align,.step,.number,.background_step
@@ -508,7 +515,7 @@ figcaption{
  
 .invisible_heart{
     top: 35%;
-    right: 4px;
+    right: 0px;
     display: none;
     -webkit-text-stroke:none;
     background:-webkit-linear-gradient(90deg, #ff79da, #9356dc);
@@ -523,7 +530,7 @@ figcaption{
 }
 
 
-.btn:focus .invisible_heart{
+.btn:hover .invisible_heart{
     display: block;
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
