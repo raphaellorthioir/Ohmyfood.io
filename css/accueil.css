@@ -839,13 +839,13 @@ figcaption{
             padding-top: 30px;
         } 
         
-        figure{
+        /*figure{
             width: 40%;
             height:auto;
-        }
+        }*/
          figure img{
             width: 100%;
-            height: 75%;
+            height: 100%;
          }
          figcaption{
              padding: 10px;
